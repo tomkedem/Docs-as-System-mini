@@ -1,0 +1,30 @@
+# VS Code local settings
+.vscode/
+
+# System files
+Thumbs.db
+.DS_Store
+
+# Node / tooling cache (in case you add tools later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs generated accidentally
+*.log
+
+# Python cache (rare, but better safe)
+__pycache__/
+*.pyc
+
+# Temporary editor files
+*.swp
+*.swo
+
+# Windows powershell history
+*.pshistory
+
+# Build artifacts (if future tooling used)
+dist/
+build/
+out/

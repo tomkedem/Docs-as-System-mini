@@ -1,0 +1,19 @@
+# Force LF line endings for all executable scripts
+*.sh text eol=lf
+*.ps1 text eol=lf
+
+# Documentation should stay consistent across platforms
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
+
+# Normalize JSON, TS and JS files
+*.json text eol=lf
+*.js   text eol=lf
+*.ts   text eol=lf
+
+# Avoid binary normalization
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary

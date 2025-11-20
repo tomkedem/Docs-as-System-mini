@@ -1,0 +1,158 @@
+# AGENT_CONFIG.mini.yaml
+# קובץ קונפיגורציה רשמי של Docs as System mini
+# קבצים שאסור לשנות בלי עדכון השיטה מסומנים כהערת חובה
+# קבצים המותאמים לפרויקט מסומנים כהערת דוגמה בלבד
+
+meta:
+  projectName: "REPLACE_ME"        # דוגמה בלבד
+  environment: "dev"               # דוגמה בלבד
+  description: "Short system description"   # דוגמה בלבד
+
+documents:
+  businessRequirementsPath: "docs/project/BUSINESS_REQUIREMENTS.mini.md"     # חובה
+  projectSpecPath: "docs/project/PROJECT_SPEC.mini.md"                       # חובה
+  architectureBlueprintPath: "docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md"   # חובה
+  implementationPlanPath: "docs/project/IMPLEMENTATION_PLAN.mini.md"         # חובה
+  implementationLogPath: "docs/logs/IMPLEMENTATION_LOG.mini.md"             # חובה
+  agentPolicyPath: "docs/agent/AGENT_OPERATIONAL_POLICY.mini.md"             # חובה
+  humanPolicyPath: "docs/agent/HUMAN_OPERATIONAL_POLICY.mini.md"             # חובה
+
+paths:
+  readablePaths: ["docs", "src", "tests"]               # דוגמה בלבד
+  writablePaths: ["src", "tests", "docs/logs", "docs/agent/notes"]   # דוגמה בלבד
+  protectedPaths: ["infra", "db", "deploy", "scripts"]               # חובה
+  readOnlyFiles: [
+    "docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md",
+    "docs/project/BUSINESS_REQUIREMENTS.mini.md",
+    "docs/project/PROJECT_SPEC.mini.md"
+  ]                                                     # חובה
+
+agent:
+  maxFilesPerTask: 12                                   # דוגמה בלבד
+  maxLinesPerFileEdit: 120                              # דוגמה בלבד
+  allowRefactorAcrossFiles: false                       # חובה
+  requirePlanBeforeChanges: true                        # חובה
+  requireSelfCheckBeforeCommit: true                    # חובה
+  requireUnitTestsForNewCode: true                      # חובה
+  requireUnitTestsForLogicChange: true                  # חובה
+
+  unitTestFolders: ["tests", "src/**/__tests__"]        # דוגמה בלבד
+  clientSideFolders: ["src/client", "src/ui"]           # דוגמה בלבד
+  serverSideFolders: ["src/server", "src/api"]          # דוגמה בלבד
+
+  preEditChecks: [
+    "Read relevant parts of PROJECT_SPEC",
+    "Read relevant parts of ARCHITECTURE_BLUEPRINT",
+    "Confirm that file is not inside protectedPaths",
+    "Confirm that change matches the active task inside IMPLEMENTATION_PLAN"
+  ]                                                     # חובה
+git:
+  defaultBranch: "main"                           # דוגמה בלבד
+  workingBranchPattern: "feature/*|bugfix/*|chore/*"   # חובה עקרונית
+
+  allowAgentCommit: true                          # דוגמה בלבד
+  allowAgentPush: false                           # דוגמה בלבד
+
+  protectedBranches: ["main", "master", "release/*"]   # חובה
+
+  allowedPaths: [
+    "src",
+    "tests",
+    "docs/logs",
+    "docs/agent"
+  ]                                               # דוגמה בלבד
+
+  commitMessage:
+    includeTags: true                             # דוגמה בלבד  
+    trailers: [
+      "Reviewed-by: HUMAN_REQUIRED",
+      "Docs as System mini"
+    ]                                             # דוגמה בלבד
+
+logging:
+  implementationLogPath: "docs/logs/IMPLEMENTATION_LOG.mini.md"   # חובה
+  requireLogPerTask: true                                         # דוגמה בלבד
+
+  logEntryTemplate:
+    fields: [
+      "dateTime",
+      "actor",      
+      "stepName",
+      "taskName",
+      "filesChanged",
+      "summary",
+      "testsSummary",
+      "reviewStatus"
+    ]                                             # חובה
+
+safety:
+  requireHumanApprovalFor: [
+    "schema changes",
+    "database migrations",
+    "security sensitive code",
+    "changes in protectedPaths"
+  ]                                               # חובה
+
+  forbiddenActions: [
+    "Delete files outside writablePaths",
+    "Change CI/CD configuration",
+    "Change deployment scripts",
+    "Modify database connection configuration",
+    "Edit prompt files in prompts library"
+  ]                                               # חובה
+
+  onUnclearInstruction: [
+    "Stop action",
+    "Summarize current understanding",
+    "Ask human for clarification"
+  ]                                               # חובה
+
+  onTestFailure: [
+    "Do not commit",
+    "Analyze failure cause",
+    "Propose fix",
+    "Apply fix only after human confirmation for risky areas"
+  ]                                               # חובה
+
+prompts:
+  # חובה  אין לשנות את מבנה התיקיה או את המיקום שלה
+  libraryFolder: "docs/prompts/PROMPTS_LIBRARY"
+
+  # חובה  תיקית Human Edit Mode חייבת להיות קיימת
+  # חובה  אסור לשנות את שמה או את מיקומה
+  humanEditFolder: "docs/prompts/HUMAN_EDIT_MODE"
+
+  files:
+    # חובה  כל הקבצים הבאים הם חלק מהשיטה
+    # חובה  אסור לשנות שמות קבצים ללא עדכון השיטה
+    understandContext: "prompt_understand_context.mini.md"
+    prepareStep: "prompt_prepare_step.mini.md"
+    executeTask: "prompt_execute_task.mini.md"
+    selfCheck: "prompt_self_check.mini.md"
+    updateLog: "prompt_update_log.mini.md"
+    prepareCommit: "prompt_prepare_commit.mini.md"
+    preparePullRequest: "prompt_prepare_pull_request.mini.md"
+
+  humanEditFiles:
+    # חובה  קבצי Human Edit Mode הם חלק מהשיטה
+    # חובה  אסור לערוך אותם בתוך פרויקט פעיל
+    analyzeHumanChanges: "prompt_analyze_human_changes.mini.md"
+    humanEditMode: "prompt_human_edit_mode.mini.md"
+
+
+commands:
+  createBranch: "docs/automation/CREATE_BRANCH.sh"           # דוגמה בלבד לפי מבנה התיקיות שלך
+  stageAndCommit: "docs/automation/STAGE_AND_COMMIT.sh"      # דוגמה בלבד
+  pushBranch: "docs/automation/PUSH_BRANCH.sh"                # דוגמה בלבד
+  openPullRequest: "docs/automation/OPEN_PULL_REQUEST.sh"     # דוגמה בלבד
+
+selfCheck:
+  checklist: [
+    "All changes align with docs/project/PROJECT_SPEC.mini.md",
+    "No violation of docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md",
+    "Change matches the active task in docs/project/IMPLEMENTATION_PLAN.mini.md",
+    "Unit tests added or updated for each new or changed logic path",
+    "All tests pass locally",
+    "Implementation log in docs/logs/IMPLEMENTATION_LOG.mini.md is updated for this task",
+    "Commit message is clear and scoped to a single task"
+  ]                                                           # חובה עקרונית
