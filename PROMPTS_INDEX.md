@@ -1,79 +1,97 @@
-<div dir="rtl" style="text-align: right;">
+📘 Docs-as-System – mini edition  
+⚠️ System File  
+
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file.  
+Update this file only through the methodology’s source repository.
+
+---
 
 # PROMPTS INDEX  
-מפתח לפרומפטים של Docs-as-System mini
+Complete index of all prompts in Docs-as-System mini
 
-קובץ זה מרכז את כל הפרומפטים בשיטה  
-ומסביר בקצרה את תפקידם ולקשר ביניהם.
+This document collects all prompts in the methodology  
+and provides a short explanation of their purpose  
+and how they connect to one another.
 
 ---
 
-## הבנת הקשר  
+## Context Understanding  
 ### prompt_understand_context.mini.md  
-קורא את כל המסמכים  
-מזהה סתירות  
-ומכין קרקע למחזור פיתוח חדש.
+Reads all project documents  
+detects contradictions  
+and prepares the ground for a new development cycle.
 
 ---
 
-## הכנת שלב  
+## Step Preparation  
 ### prompt_prepare_step.mini.md  
-מזהה את השלב והמשימות הרלוונטיות מתוך תוכנית המימוש.
+Identifies the active step  
+and the tasks relevant to the current cycle  
+based on the Implementation Plan.
 
 ---
 
-## ביצוע משימה  
+## Task Execution  
 ### prompt_execute_task.mini.md  
-מטפל בשינוי הקוד הקטן ביותר הנדרש לצורך המשימה.  
-לא מבצע refactor.  
-לא משנה קבצים שלא הוגדרו.
+Performs the smallest required code change  
+needed for the task.  
+Does not refactor.  
+Does not modify files not defined by the task.
 
 ---
 
-## בדיקה עצמית  
+## Self Check  
 ### prompt_self_check.mini.md  
-בודק עקביות מול כל המסמכים.  
-בודק שלא חרגו מהמשימה.  
-בודק שהבדיקות עברו.
+Validates alignment with all documents.  
+Ensures no deviation from the task.  
+Ensures all tests pass.
 
 ---
 
-## עדכון לוג  
+## Log Update  
 ### prompt_update_log.mini.md  
-מוסיף רשומה חדשה ל־IMPLEMENTATION_LOG לפי תבנית קבועה מראש.
+Adds a new entry to the IMPLEMENTATION_LOG  
+based on the predefined template.
 
 ---
 
-## הכנת קומיט  
+## Commit Preparation  
 ### prompt_prepare_commit.mini.md  
-בונה הודעת קומיט לפי הרשומה האחרונה בלוג.  
-מחליט אילו קבצים ייכנסו לסטייג'.  
-מפעיל את הסקריפט STAGE_AND_COMMIT.sh.
+Builds the commit message based on the latest log entry.  
+Determines which files should be staged.  
+Executes the STAGE_AND_COMMIT.sh script.
 
 ---
 
-## הכנת בקשת משיכה  
+## Pull Request Preparation  
 ### prompt_prepare_pull_request.mini.md  
-בונה PR מלא־שיטה מהלוג ומהמסמכים.  
-מפעיל את הסקריפט OPEN_PULL_REQUEST.sh.
+Builds a full methodology compliant pull request  
+based on the log and project documents.  
+Executes the OPEN_PULL_REQUEST.sh script.
 
 ---
 
-## טיפול בשינוי אנושי  
+## Handling Human Edits  
 ### prompt_human_edit_mode.mini.md  
-עוצר את המחזור ומציג לאדם את השינויים שבוצעו ידנית.
+Stops the cycle and presents the manual human changes.
 
 ### prompt_analyze_human_changes.mini.md  
-מציג ניתוח מלא של השינוי האנושי  
-ומחכה להחלטה אנושית לפני המשך.
+Provides a full analysis of the human change  
+and waits for a clear human decision before continuing.
 
 ---
 
-## orchestration  
+## Orchestration  
 ### prompt_main_orchestration.mini.md  
-מנהל את כל המחזור מתחילתו ועד סופו.  
-מפעיל את כל הפרומפטים לפי סדר קשיח.  
-עוצר בכל מצב לא תקין.  
+Manages the entire development cycle start to finish.  
+Activates all prompts in a strict order.  
+Stops on any invalid or unclear condition.
 
+---
 
-</div>
+This file is a protected system component.  
+It is part of the official Docs-as-System methodology  
+and must not be modified by end users.
+
+© 2025 Tomer Kedem

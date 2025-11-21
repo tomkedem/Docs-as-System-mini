@@ -1,197 +1,251 @@
-# חובה  קובץ זה הוא חלק משיטת Docs as System mini  
-# חובה  אין לערוך קובץ זה בתוך פרויקט פעיל  
-# חובה  שינוי בקובץ זה יתבצע רק בעדכון רשמי של השיטה
+📘 Docs-as-System – mini edition  
+⚠️ System File  
 
-# פרומפט ראשי להפעלת מחזור פיתוח  
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file.  
+Update this file only through the methodology’s source repository.
 
-מטרה  
-להפעיל מחזור פיתוח מלא מתחילתו ועד סופו  
-באמצעות שימוש בפרומפטים הייעודיים של השיטה  
-ובאופן התואם למסמכים  
-למדיניות הסוכן  
-ולמדיניות האדם
+---
 
-קבצים רלוונטיים  
+# Main Orchestration Prompt  
+Full Development Cycle Controller
 
-מסמכי הפרויקט  
-docs/project/BUSINESS_REQUIREMENTS.mini.md  
-docs/project/PROJECT_SPEC.mini.md  
-docs/project/IMPLEMENTATION_PLAN.mini.md  
+## Purpose  
+Execute a full structured development cycle  
+using the dedicated prompts of the methodology  
+in complete alignment with the project documents,  
+agent policy,  
+and human policy.
 
-מסמכי ארכיטקטורה  
-docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md  
+This prompt does not perform the actions itself.  
+It orchestrates the cycle by activating the correct prompts  
+in the correct order  
+without skipping any stage.
 
-מסמכי התנהגות  
-docs/agent/AGENT_OPERATIONAL_POLICY.mini.md  
-docs/agent/HUMAN_OPERATIONAL_POLICY.mini.md  
+---
 
-קונפיגורציה  
-docs/agent/AGENT_CONFIG.mini.yaml  
+## Relevant Files  
 
-לוג חי  
-docs/logs/IMPLEMENTATION_LOG.mini.md  
+### Project Documents  
+• docs/project/BUSINESS_REQUIREMENTS.mini.md  
+• docs/project/PROJECT_SPEC.mini.md  
+• docs/project/IMPLEMENTATION_PLAN.mini.md  
+• docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
 
-עיקרון עבודה  
-כל פעולה חייבת להתבצע באמצעות הפעלת פרומפט ייעודי  
-אין לבצע לוגיקה שאינה חלק מפרומפט ייעודי  
-אין לדלג על שלבים  
-אין להמציא תהליכים חדשים  
-אין לבצע פעולות Git ישירות ללא הסקריפטים והפרומפטים שאושרו בשיטה  
+### Behavioral Documents  
+• docs/agent/AGENT_OPERATIONAL_POLICY.mini.md  
+• docs/agent/HUMAN_OPERATIONAL_POLICY.mini.md  
 
-## לולאת פיתוח מלאה  
+### Configuration  
+• docs/agent/AGENT_CONFIG.mini.yaml  
 
-הפעל פרומפט הבנת הקשר  
+### Live Log  
+• docs/logs/IMPLEMENTATION_LOG.mini.md  
+
+---
+
+## Core Operating Principle  
+
+• Every action must be executed through its dedicated prompt  
+• No logic may be invented outside the prompts  
+• No stage may be skipped  
+• No new workflow may be created  
+• No Git actions may be performed manually  
+  Only through the official scripts and prompts of the methodology  
+
+---
+
+# Full Development Loop  
+
+## 1. Run the Context Understanding Prompt  
 prompt_understand_context.mini.md  
-טען את המסמכים הרלוונטיים  
-בדוק את הזרימה  
-בדוק את הגבולות  
-עצור אם קיימת אי בהירות  
 
-הפעל פרומפט הכנת שלב  
+• Load all relevant documents  
+• Review the flow  
+• Understand boundaries  
+• Stop if any uncertainty exists  
+
+---
+
+## 2. Run the Step Preparation Prompt  
 prompt_prepare_step.mini.md  
-זהה את השלב הפעיל מתוך תוכנית המימוש  
-זהה את כל המשימות בשלב  
-בדוק תלותיות  
-ודא שהשלב מוכן להפעלה  
 
-הפעל פרומפט ביצוע משימה  
+• Identify the active step  
+• Identify all tasks inside the step  
+• Review dependencies  
+• Confirm the step is ready for execution  
+
+---
+
+## 3. Run the Execute Task Prompt  
 prompt_execute_task.mini.md  
-בצע את הפעולה הקטנה ביותר הנדרשת  
-ערוך רק קבצים המותרים לעריכה  
-הצמד למסמכי הפרויקט  
-הוסף או עדכן בדיקות יחידה במידת הצורך  
-ודא שהתוצאה תואמת לחלוטין את המשימה  
 
-הפעל פרומפט בדיקה עצמית  
+• Perform the smallest required change  
+• Modify only allowed files  
+• Follow all project documents  
+• Add or update unit tests as required  
+• Ensure accurate completion of the task  
+
+---
+
+## 4. Run the Self Check Prompt  
 prompt_self_check.mini.md  
-בדוק שאין סטיות מהמסמכים  
-בדוק שכל הבדיקות עוברות  
-בדוק שאין שינוי שאינו חלק מהמשימה  
-בדוק שקובץ הלוג מוכן לעדכון  
 
-הפעל פרומפט עדכון לוג  
+• Verify no deviation from project documents  
+• Verify all tests pass  
+• Verify no unrelated changes exist  
+• Verify the log file is ready for update  
+
+---
+
+## 5. Run the Update Log Prompt  
 prompt_update_log.mini.md  
-קרא את התבנית  
-templates/log/IMPLEMENTATION_LOG_TEMPLATE.mini.md  
-קרא את הלוג החי  
-docs/logs/IMPLEMENTATION_LOG.mini.md  
-הרכב רשומה חדשה לפי התבנית  
-הוסף אותה לסוף הקובץ  
 
-הפעל פרומפט הכנת קומיט  
+• Read the template  
+  docs/project/templates/log/IMPLEMENTATION_LOG_TEMPLATE.mini.md  
+• Read the live log  
+  docs/logs/IMPLEMENTATION_LOG.mini.md  
+• Create a new entry based strictly on the template  
+• Append it to the log  
+
+---
+
+## 6. Run the Prepare Commit Prompt  
 prompt_prepare_commit.mini.md  
-פרומפט זה כולל גם את שכבת ביצוע הקומיט  
-באמצעות הסקריפט הרשמי  
-docs/automation/STAGE_AND_COMMIT.sh  
-ודא התאמה מלאה בין המסמכים  
-הלוג  
-ורשימת הקבצים ששונו במשימה  
 
-הפעל פרומפט הכנת בקשת משיכה  
+• This includes the commit execution layer  
+• Commit must be created using  
+  docs/automation/STAGE_AND_COMMIT.sh  
+• Validate full alignment between documents,  
+  log entry,  
+  and modified files  
+
+---
+
+## 7. Run the Prepare Pull Request Prompt  
 prompt_prepare_pull_request.mini.md  
-פרומפט זה כולל גם את שכבת ביצוע פתיחת בקשת המשיכה  
-באמצעות הסקריפט הרשמי  
-docs/automation/OPEN_PULL_REQUEST.sh  
-הפרומפט מייצר כותרת PR  
-גוף מובנה  
-ותיעוד מלא המבוסס על הלוג  
-על תוכנית המימוש  
-ועל מסמכי הפרויקט  
-אין לפתוח PR בכל דרך אחרת  
 
+• This includes the PR execution layer  
+• PR must be opened using  
+  docs/automation/OPEN_PULL_REQUEST.sh  
+• The prompt constructs  
+  PR title,  
+  PR body,  
+  and required documentation  
+• No PR may be opened in any other way  
 
-## תנאי עצירה מיידיים  
+---
 
-עצור את התהליך בכל אחד מהמצבים הבאים  
-כאשר המסמכים אינם עקביים  
-כאשר קיים חלק חסר במסמכים  
-כאשר המשימה אינה ברורה  
-כאשר תוצאות הבדיקות אינן תקינות  
-כאשר מתגלה שינוי בקובץ שאינו שייך למשימה  
-כאשר נדרש אישור אדם לפי כללי המדיניות  
-כאשר יש אינדיקציה לשינוי ידני בקבצים  
-שלא בוצע כחלק מהמחזור הנוכחי  
+# Immediate Stop Conditions  
 
-בכל אחד מהמצבים  
-עצור  
-סכם את מצבך הנוכחי  
-ובקש הנחיה לפני המשך פעולה  
+Stop the process immediately when:
 
-## טיפול בשינויים ידניים  
+• Documents are inconsistent  
+• A required document is missing  
+• The task is unclear  
+• Any test fails  
+• A file was changed outside the task scope  
+• Human approval is required  
+• Manual changes were detected that do not belong to the current cycle  
 
-אם זוהו שינויים שבוצעו על ידי אדם  
-שאינם חלק מהמחזור הנוכחי  
-עצור מייד את רצף העבודה הרגיל  
+Whenever this happens:  
+Stop  
+Summarize your current understanding  
+Ask for human guidance before continuing  
 
-הפעל את הפרומפט  
-prompt_human_edit_mode.mini.md  
-לאחר מכן הפעל  
-prompt_analyze_human_changes.mini.md  
+---
 
-פעל לפי ההנחיות במסמכי המדיניות  
-אל תמשיך למחזור הרגיל  
-עד שתתקבל הנחיה מפורשת להמשיך  
+# Handling Manual Human Changes  
 
-## טיפול במצב של ספק  
+If manual changes are detected that were not part of the current cycle:
 
-כאשר יש ספק לגבי  
-תוצאה  
-התנהגות  
-או משימה  
+Stop immediately  
+Activate:
 
-עצור את התהליך  
-כתוב סיכום קצר של ההבנה הנוכחית  
-זהה את חלק המידע החסר  
-בקשת הבהרה היא הפעולה היחידה המותרת  
+1. prompt_human_edit_mode.mini.md  
+2. prompt_analyze_human_changes.mini.md  
 
-אין להמשיך לפעול ללא בהירות מלאה  
+Follow all rules in the behavior policies  
+Do not return to the normal workflow  
+until the human explicitly approves continuation  
 
-## טיפול בשגיאה במהלך ביצוע משימה  
+---
 
-במקרה של חריגה מהמצופה  
-קרא שוב את מסמכי השלב  
-זהה את המקור לשגיאה  
-בדוק אם מדובר בשינוי שאינו חלק מהמשימה  
-בדוק אם מדובר בנתון חסר  
-בדוק אם מדובר בסטיה מה Blueprint  
+# Handling Uncertainty  
 
-עצור את המשימה  
-בקש הנחיה ברורה  
-ולאחר קבלת תשובה  
-חזור לפרומפט ביצוע משימה  
+If there is doubt regarding:  
+• Expected behavior  
+• Task definition  
+• Missing information  
 
-## המשך מחזור פיתוח  
+Stop the process  
+Produce a short summary of the current understanding  
+Identify missing information  
+Request clarification  
 
-לאחר שהקומיט בוצע  
-ולאחר בקשת המשיכה  
-ניתן להתחיל מחזור חדש  
+No action may continue without full clarity  
 
-עבור למשימה הבאה באותו שלב  
-או סגור את השלב אם כל משימותיו הושלמו  
+---
 
-כל מחזור פיתוח חייב לכלול  
-הבנת הקשר  
-הכנת שלב  
-ביצוע משימה  
-בדיקה עצמית  
-עדכון לוג  
-הכנת קומיט  
-הכנת בקשת משיכה  
+# Handling Errors During Task Execution  
 
-## סיכום  
+If the task produces results that differ from expectations:
 
-קובץ זה מפעיל את כל מחזור הפיתוח בשיטת Docs as System mini  
-הוא אינו מבצע את הפעולות בעצמו  
-אלא מפנה לפרומפטים הייעודיים  
+• Read the step documents again  
+• Identify the cause of the deviation  
+• Check whether the issue is:  
+  – A non task related change  
+  – Missing information  
+  – A deviation from the Blueprint  
+• Stop the task  
+• Ask for human guidance  
+• After receiving guidance, return to the Execute Task prompt  
 
-כל פעולה חייבת להתבצע באמצעות הפרומפט המתאים  
-אין לדלג על שלבים  
-אין להוסיף שלבים חדשים  
-אין לבצע פעולה שאינה חלק מהשיטה  
+---
 
-הקפדה על קובץ זה  
-מבטיחה תהליך פיתוח יציב  
-ברור  
-ומבוקר  
-המשלב אדם וסוכן בצורה נכונה  
-ומבוססת מסמכים  
+# Starting the Next Cycle  
+
+After the commit is completed  
+and the pull request is created:
+
+• Move to the next task in the same step  
+or  
+• Close the step if all tasks were completed  
+
+Every development cycle must include:  
+• Context understanding  
+• Step preparation  
+• Task execution  
+• Self check  
+• Log update  
+• Commit preparation  
+• Pull request preparation  
+
+---
+
+# Summary  
+
+This file orchestrates the entire development cycle  
+of the Docs-as-System mini methodology.  
+
+It does not execute tasks directly  
+but delegates all execution  
+to the dedicated prompts.  
+
+Every action must be done through its correct prompt  
+No stages may be skipped  
+No additional steps may be invented  
+No operations may be performed outside the methodology  
+
+Strict use of this orchestration file  
+ensures a stable, clear, and controlled development process  
+that correctly integrates human and agent  
+through a document driven workflow.
+
+---
+
+This file is a protected system component.  
+It is part of the official Docs-as-System methodology  
+and must not be modified by end users.
+
+© 2025 Tomer Kedem

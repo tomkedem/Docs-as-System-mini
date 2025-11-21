@@ -1,110 +1,137 @@
-# חובה  קובץ זה חלק משיטת Docs as System mini  
-# חובה  אין לערוך קובץ זה בתוך פרויקט פעיל  
-# חובה  שינוי בקובץ זה יתבצע רק בעדכון רשמי של השיטה
+📘 Docs-as-System – mini edition  
+⚠️ System File  
 
-# הכנת בקשת משיכה
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file.  
+Update this file only through the methodology’s source repository.
 
-מטרה  
-לבנות בקשת משיכה מסודרת ומדויקת  
-המבוססת על מסמכי הפרויקט  
-על הרשומה האחרונה בלוג  
-ועל תוצאות המשימה שהסתיימה  
-ולבצע פתיחת PR באמצעות הסקריפט הרשמי OPEN_PULL_REQUEST.sh
+---
 
-קבצים רלוונטיים  
-docs/logs/IMPLEMENTATION_LOG.mini.md  
-docs/project/IMPLEMENTATION_PLAN.mini.md  
-docs/project/PROJECT_SPEC.mini.md  
-docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md  
-docs/agent/AGENT_CONFIG.mini.yaml  
-docs/automation/OPEN_PULL_REQUEST.sh  
+# Prepare Pull Request
 
-## הוראות  
+## Purpose  
+Prepare a structured and accurate pull request  
+based on the project documents,  
+the latest entry in the implementation log,  
+and the results of the completed task.  
+The pull request must be opened only through the official script  
+docs/automation/OPEN_PULL_REQUEST.sh.
 
-קרא את הרשומה האחרונה בלוג  
-docs/logs/IMPLEMENTATION_LOG.mini.md  
+## Relevant Files  
+• docs/logs/IMPLEMENTATION_LOG.mini.md  
+• docs/project/IMPLEMENTATION_PLAN.mini.md  
+• docs/project/PROJECT_SPEC.mini.md  
+• docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
+• docs/agent/AGENT_CONFIG.mini.yaml  
+• docs/automation/OPEN_PULL_REQUEST.sh  
 
-זהה מתוך הרשומה  
-● שם השלב  
-● שם המשימה  
-● מטרת המשימה  
-● תקציר של מה בוצע  
-● קבצים מרכזיים ששונו  
-● מצב הבדיקות  
+---
 
-בדוק שאין שינוי שאינו חלק מהמשימה  
-בדוק שהתוצאה תואמת למסמכי הפרויקט  
-בדוק שכל הבדיקות עברו בהצלחה  
+## Instructions  
 
-## בניית כותרת וגוף הבקשה  
+Read the latest log entry  
+from docs/logs/IMPLEMENTATION_LOG.mini.md  
 
-כותרת קצרה  
-שלב + משימה  
-למשל  
+Identify from the entry:  
+• Step name  
+• Task name  
+• Task purpose  
+• Summary of what was completed  
+• Key modified files  
+• Test results  
+
+Verify that:  
+• No change was made outside the scope of the task  
+• The result aligns with PROJECT_SPEC  
+• The result aligns with ARCHITECTURE_BLUEPRINT  
+• All tests passed successfully  
+
+---
+
+## Build Title and Body for the Pull Request  
+
+### Title  
+Short format  
+Step + Task  
+Example:  
 "BuildAPI – AddValidationRules"
 
-גוף בקשה  
-כלול בו את המידע הבא  
-● תיאור קצר של מטרת המשימה  
-● תקציר ברור של מה בוצע  
-● קבצים מרכזיים שנערכו  
-● איך השינוי תואם את SPEC ואת ה Blueprint  
-● תוצאות הבדיקות  
-● נקודות חשובות לסוקר האנושי  
+### Body  
+Include only the following:  
+• Short description of the task purpose  
+• Clear summary of what was done  
+• Key modified files  
+• How the change aligns with SPEC and the Blueprint  
+• Test results  
+• Important notes for the human reviewer  
 
-אל תוסיף מידע שאינו קיים בלוג או במסמכים  
-אל תכלול קוד שהוא לא חלק מהמשימה  
+Do not add any information that does not appear  
+in the log or project documents.  
+Do not include code that is not part of the task.
 
-## בדיקות לפני פתיחת בקשה  
+---
 
-קרא את docs/agent/AGENT_CONFIG.mini.yaml  
+## Pre-PR Validations  
 
-ודא שהענף הנוכחי אינו נמצא ברשימת  
-git.protectedBranches  
+Read docs/agent/AGENT_CONFIG.mini.yaml  
 
-ודא שלענף יש upstream  
-אם אין upstream  
-עצור ובקש הנחיה מאדם  
+Verify that:  
+• The current branch is not in git.protectedBranches  
+• The branch has an upstream  
+  If it does not, stop and ask for human instruction  
+• There is no existing pull request for this branch  
+  The script OPEN_PULL_REQUEST.sh performs an additional check  
 
-בדוק שאין בקשת משיכה קיימת עבור הענף  
-(הסקריפט OPEN_PULL_REQUEST.sh יבצע בדיקה נוספת)
+---
 
-## שכבת ביצוע פתיחת בקשה  
+## Execution Layer  
 
-לאחר שכל התנאים התקיימו  
-יש לפתוח PR רק באמצעות הסקריפט הרשמי  
+After all conditions are met  
+open the PR only using the official script.
 
-הכן את משתני הסביבה  
-PR_TITLE  
-PR_BODY  
+Prepare environment variables:  
+• PR_TITLE  
+• PR_BODY  
 
-ביצוע הפעולה  
+Execution:
 
 ```bash
 PR_TITLE="<short-title>" \
 PR_BODY="<pull-request-body>" \
 ./docs/automation/OPEN_PULL_REQUEST.sh
 ```
+---
 
-## כללים מחייבים  
-אין לפתוח PR ישירות דרך gh  
-אין לפתוח PR דרך ממשק GitHub  
-אין לבנות כותרת שאינה מבוססת על השלב והמשימה  
-אין לבנות גוף PR שאינו מבוסס על הלוג  
-אין לבצע PR מענף שמופיע ב protectedBranches  
+## Mandatory Rules
 
-## תנאי המשך  
-הסקריפט הסתיים בהצלחה  
-הבקשה נוצרה כ draft  
-הכותרת תואמת לשלב ולמשימה  
-גוף הבקשה תואם ללוג ולמסמכים  
-אין שגיאות מהסקריפט  
-הכל מתועד ביומן  
+• Do not open PRs through gh  
+• Do not open PRs through GitHub UI  
+• Do not create a title that is not based on step + task  
+• Do not create a PR body not based on the log  
+• Do not perform PR from a branch in protectedBranches  
 
-## פלט מצופה  
-בקשת משיכה מסודרת  
-קצרה וברורה  
-מובנית לפי השיטה  
-תואמת את הלוג  
-תואמת את המסמכים  
-ומוכנה לסקירה אנושית  
+## Continuation Conditions
+
+• Script finished successfully  
+• Pull request created as draft  
+• Title matches step and task  
+• Body matches the log and documents  
+• No errors returned from the script  
+• Everything is documented in the implementation log  
+
+## Expected Output
+
+A structured pull request  
+Short and clear  
+Methodology compliant  
+Based on the log  
+Aligned with the documents  
+Ready for human review  
+
+---
+
+This file is a protected system component.  
+It is part of the official Docs-as-System methodology  
+and must not be modified by end users.
+
+© 2025 Tomer Kedem

@@ -1,58 +1,72 @@
-# חובה  קובץ זה הוא חלק משיטת Docs as System mini  
-# חובה  אין לערוך קובץ זה בתוך פרויקט פעיל  
-# חובה  שינוי בקובץ זה יתבצע רק בעדכון רשמי של השיטה
+📘 Docs-as-System – mini edition  
+⚠️ System File  
 
-# הכנת שלב פיתוח  
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file.  
+Update this file only through the methodology’s source repository.
 
-מטרה  
-לזהות את השלב הפעיל בתוכנית המימוש  
-להבין את מבנה המשימות שלו  
-ולבדוק שהשלב מוכן לביצוע לפני התחלת עבודה
+---
 
-קבצים רלוונטיים  
-# חובה  אין לשנות שמות קבצים או מיקום קבצים  
-docs/project/IMPLEMENTATION_PLAN.mini.md  
-docs/project/PROJECT_SPEC.mini.md  
-docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md  
+# Prepare Step
 
-## הוראות  
-קרא את הקובץ IMPLEMENTATION_PLAN.mini.md  
-זהה את השלב המסומן כשלב הפעיל  
-בדוק שהשלב כולל משימות מוגדרות וברורות  
+## Purpose  
+Identify the active step inside the Implementation Plan,  
+understand its tasks,  
+and verify that the step is ready for execution before any work begins.
 
-עבור כל משימה בשלב  
-קרא את שם המשימה  
-קרא את מטרת המשימה  
-קרא את התלות בין משימות אם קיימת  
+## Relevant Files  
+• docs/project/IMPLEMENTATION_PLAN.mini.md  
+• docs/project/PROJECT_SPEC.mini.md  
+• docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
 
-בדוק האם כל משימה בשלב  
-מתואמת עם מסמך PROJECT_SPEC  
-מתואמת עם מסמך ARCHITECTURE_BLUEPRINT  
-עומדת בדרישות העסקיות  
+## Instructions  
 
-בדוק האם קיימות משימות  
-הדורשות אישור אדם  
-המשפיעות על אזורים רגישים  
-המשפיעות על כמה רכיבים במקביל  
+Read the file IMPLEMENTATION_PLAN.mini.md  
+Find the step marked as the active step  
+Verify that the step contains well defined tasks  
 
-בדוק אם קיימות משימות חסרות מידע  
-משימות ללא תוצאה מוגדרת  
-משימות שאינן חלק מתוכנית ברורה  
+For each task in the step:  
+• Read the task name  
+• Read the task objective  
+• Check dependencies between tasks if any exist  
 
-אם נמצא חוסר בהירות  
-עצור  
-סכם את מצבך  
-ובקש הנחיה  
+Verify for each task:  
+• It aligns with PROJECT_SPEC  
+• It aligns with ARCHITECTURE_BLUEPRINT  
+• It matches the business requirements  
 
-## תנאי המשך  
-השלב מזוהה בבירור  
-כל המשימות בשלב מובנות  
-אין סתירה בין המשימות לבין מסמכי המערכת  
-אין פערי מידע  
-השלב מוכן להפעלה  
+Check if any task:  
+• Requires human approval  
+• Impacts sensitive areas  
+• Impacts multiple components simultaneously  
 
-פלט מצופה  
-תמונה מלאה ומסודרת של מבנה השלב  
-רשימת המשימות בשלב  
-זיהוי תלותיות  
-הבנה אם ניתן להתחיל משימה או שחסר מידע  
+Identify if any tasks are missing critical information:  
+• Tasks without a clear outcome  
+• Tasks without a defined purpose  
+• Tasks not belonging to a coherent plan  
+
+If any uncertainty is found:  
+Stop  
+Summarize your current understanding  
+Ask the human for guidance  
+
+## Continuation Conditions  
+• The active step is clearly identified  
+• All tasks inside the step are understood  
+• No contradictions exist between the step and the system documents  
+• No missing information  
+• The step is ready for execution  
+
+## Expected Output  
+• A complete structured picture of the step  
+• A list of tasks inside the step  
+• Identification of dependencies  
+• Understanding whether work can begin or additional clarification is required  
+
+---
+
+This file is a protected system component.  
+It is part of the official Docs-as-System methodology  
+and must not be modified by end users.
+
+© 2025 Tomer Kedem

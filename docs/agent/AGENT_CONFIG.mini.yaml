@@ -1,130 +1,174 @@
-# AGENT_CONFIG.mini.yaml
-# קובץ קונפיגורציה רשמי של Docs as System mini
-# קבצים שאסור לשנות בלי עדכון השיטה מסומנים כהערת חובה
-# קבצים המותאמים לפרויקט מסומנים כהערת דוגמה בלבד
+# 📘 Docs-as-System – mini edition
+# ⚠️ System File
+#
+# This file is part of the official Docs-as-System methodology.
+# End users must not modify this file.
+# Update this file only through the methodology’s source repository.
 
-meta:
-  projectName: "REPLACE_ME"        # דוגמה בלבד
-  environment: "dev"               # דוגמה בלבד
-  description: "Short system description"   # דוגמה בלבד
+# ============================================================================
+# METADATA — PROJECT + METHODOLOGY IDENTIFICATION
+# ============================================================================
 
-documents:
-  businessRequirementsPath: "docs/project/BUSINESS_REQUIREMENTS.mini.md"     # חובה
-  projectSpecPath: "docs/project/PROJECT_SPEC.mini.md"                       # חובה
-  architectureBlueprintPath: "docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md"   # חובה
-  implementationPlanPath: "docs/project/IMPLEMENTATION_PLAN.mini.md"         # חובה
-  implementationLogPath: "docs/logs/IMPLEMENTATION_LOG.mini.md"             # חובה
-  agentPolicyPath: "docs/agent/AGENT_OPERATIONAL_POLICY.mini.md"             # חובה
-  humanPolicyPath: "docs/agent/HUMAN_OPERATIONAL_POLICY.mini.md"             # חובה
+metadata:
+  methodologyName: "Docs-as-System"
+  edition: "mini"
+  language: "en"                       # The selected language for project documents  
+                                       # (e.g., "en", "he", "es", etc.)
+                                       # Summaries in docs/logs/summaries will be generated
+                                       # in this language.
+  versionFile: "VERSION.txt"
+
+  projectName: "REPLACE_ME"            # User must update
+  environment: "dev"                   # User must update
+  description: "Short system description"   # User must update
+
+# ============================================================================
+# ROOT PATHS — TOP-LEVEL DOCUMENTS
+# ============================================================================
 
 paths:
-  readablePaths: ["docs", "src", "tests"]               # דוגמה בלבד
-  writablePaths: ["src", "tests", "docs/logs", "docs/agent/notes"]   # דוגמה בלבד
-  protectedPaths: ["infra", "db", "deploy", "scripts"]               # חובה
-  readOnlyFiles: [
-    "docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md",
-    "docs/project/BUSINESS_REQUIREMENTS.mini.md",
-    "docs/project/PROJECT_SPEC.mini.md"
-  ]                                                     # חובה
+  root:
+    readme: "README.md"
+    promptsIndex: "PROMPTS_INDEX.md"
+
+  readablePaths: ["docs", "src", "tests"]
+  writablePaths: ["src", "tests", "docs/logs", "docs/agent/notes"]
+  protectedPaths: ["infra", "db", "deploy", "scripts"]
+
+  readOnlyFiles:
+    - "docs/project/ARCHITECTURE_BLUEPRINT.mini.md"
+    - "docs/project/BUSINESS_REQUIREMENTS.mini.md"
+    - "docs/project/PROJECT_SPEC.mini.md"
+
+# ============================================================================
+# DOCUMENT PATHS — MUST MATCH THE FINAL STRUCTURE
+# ============================================================================
+
+documents:
+  businessRequirementsPath: "docs/project/BUSINESS_REQUIREMENTS.mini.md"
+  projectSpecPath: "docs/project/PROJECT_SPEC.mini.md"
+  architectureBlueprintPath: "docs/project/ARCHITECTURE_BLUEPRINT.mini.md"
+  implementationPlanPath: "docs/project/IMPLEMENTATION_PLAN.mini.md"
+
+  implementationLogPath: "docs/logs/IMPLEMENTATION_LOG.mini.md"       
+  implementationLogTemplatePath: "docs/project/templates/log/IMPLEMENTATION_LOG_TEMPLATE.mini.md"
+
+  agentPolicyPath: "docs/agent/AGENT_OPERATIONAL_POLICY.mini.md"
+  humanPolicyPath: "docs/agent/HUMAN_OPERATIONAL_POLICY.mini.md"
+
+# ============================================================================
+# AGENT BEHAVIOR SETTINGS
+# ============================================================================
 
 agent:
-  maxFilesPerTask: 12                                   # דוגמה בלבד
-  maxLinesPerFileEdit: 120                              # דוגמה בלבד
-  allowRefactorAcrossFiles: false                       # חובה
-  requirePlanBeforeChanges: true                        # חובה
-  requireSelfCheckBeforeCommit: true                    # חובה
-  requireUnitTestsForNewCode: true                      # חובה
-  requireUnitTestsForLogicChange: true                  # חובה
+  maxFilesPerTask: 12
+  maxLinesPerFileEdit: 120
+  allowRefactorAcrossFiles: false
 
-  unitTestFolders: ["tests", "src/**/__tests__"]        # דוגמה בלבד
-  clientSideFolders: ["src/client", "src/ui"]           # דוגמה בלבד
-  serverSideFolders: ["src/server", "src/api"]          # דוגמה בלבד
+  requirePlanBeforeChanges: true
+  requireSelfCheckBeforeCommit: true
+  requireUnitTestsForNewCode: true
+  requireUnitTestsForLogicChange: true
 
-  preEditChecks: [
-    "Read relevant parts of PROJECT_SPEC",
-    "Read relevant parts of ARCHITECTURE_BLUEPRINT",
-    "Confirm that file is not inside protectedPaths",
-    "Confirm that change matches the active task inside IMPLEMENTATION_PLAN"
-  ]                                                     # חובה
+  unitTestFolders: ["tests", "src/**/__tests__"]
+  clientSideFolders: ["src/client", "src/ui"]
+  serverSideFolders: ["src/server", "src/api"]
+
+  preEditChecks:
+    - "Read relevant parts of PROJECT_SPEC"
+    - "Read relevant parts of ARCHITECTURE_BLUEPRINT"
+    - "Confirm that file is not inside protectedPaths"
+    - "Confirm that change matches the active task inside IMPLEMENTATION_PLAN"
+
+# ============================================================================
+# GIT RULES
+# ============================================================================
+
 git:
-  defaultBranch: "main"                           # דוגמה בלבד
-  workingBranchPattern: "feature/*|bugfix/*|chore/*"   # חובה עקרונית
+  defaultBranch: "main"
+  workingBranchPattern: "feature/*|bugfix/*|chore/*"
 
-  allowAgentCommit: true                          # דוגמה בלבד
-  allowAgentPush: false                           # דוגמה בלבד
+  allowAgentCommit: true
+  allowAgentPush: false
 
-  protectedBranches: ["main", "master", "release/*"]   # חובה
+  protectedBranches:
+    - "main"
+    - "master"
+    - "release/*"
 
-  allowedPaths: [
-    "src",
-    "tests",
-    "docs/logs",
-    "docs/agent"
-  ]                                               # דוגמה בלבד
+  allowedPaths:
+    - "src"
+    - "tests"
+    - "docs/logs"
+    - "docs/agent"
 
   commitMessage:
-    includeTags: true                             # דוגמה בלבד  
-    trailers: [
-      "Reviewed-by: HUMAN_REQUIRED",
-      "Docs as System mini"
-    ]                                             # דוגמה בלבד
+    includeTags: true
+    trailers:
+      - "Reviewed-by: HUMAN_REQUIRED"
+      - "Docs-as-System mini"
+
+# ============================================================================
+# LOGGING RULES — ALWAYS IN ENGLISH
+# ============================================================================
 
 logging:
-  implementationLogPath: "docs/logs/IMPLEMENTATION_LOG.mini.md"   # חובה
-  requireLogPerTask: true                                         # דוגמה בלבד
+  implementationLogPath: "docs/logs/IMPLEMENTATION_LOG.mini.md"
+  summariesFolderPath: "docs/logs/summaries"
+
+  language: "en"                       # Required: implementation log is always in English
+
+  requireLogPerTask: true
 
   logEntryTemplate:
-    fields: [
-      "dateTime",
-      "actor",      
-      "stepName",
-      "taskName",
-      "filesChanged",
-      "summary",
-      "testsSummary",
-      "reviewStatus"
-    ]                                             # חובה
+    fields:
+      - "dateTime"
+      - "actor"
+      - "stepName"
+      - "taskName"
+      - "filesChanged"
+      - "summary"
+      - "testsSummary"
+      - "reviewStatus"
+
+# ============================================================================
+# SAFETY RULES
+# ============================================================================
 
 safety:
-  requireHumanApprovalFor: [
-    "schema changes",
-    "database migrations",
-    "security sensitive code",
-    "changes in protectedPaths"
-  ]                                               # חובה
+  requireHumanApprovalFor:
+    - "schema changes"
+    - "database migrations"
+    - "security sensitive code"
+    - "changes in protectedPaths"
 
-  forbiddenActions: [
-    "Delete files outside writablePaths",
-    "Change CI/CD configuration",
-    "Change deployment scripts",
-    "Modify database connection configuration",
-    "Edit prompt files in prompts library"
-  ]                                               # חובה
+  forbiddenActions:
+    - "Delete files outside writablePaths"
+    - "Change CI/CD configuration"
+    - "Change deployment scripts"
+    - "Modify database connection configuration"
+    - "Edit prompt files in prompts library"
 
-  onUnclearInstruction: [
-    "Stop action",
-    "Summarize current understanding",
-    "Ask human for clarification"
-  ]                                               # חובה
+  onUnclearInstruction:
+    - "Stop action"
+    - "Summarize current understanding"
+    - "Ask human for clarification"
 
-  onTestFailure: [
-    "Do not commit",
-    "Analyze failure cause",
-    "Propose fix",
-    "Apply fix only after human confirmation for risky areas"
-  ]                                               # חובה
+  onTestFailure:
+    - "Do not commit"
+    - "Analyze failure cause"
+    - "Propose fix"
+    - "Apply fix only after human confirmation for risky areas"
+
+# ============================================================================
+# PROMPTS — STRUCTURE AND PATHS
+# ============================================================================
 
 prompts:
-  # חובה  אין לשנות את מבנה התיקיה או את המיקום שלה
   libraryFolder: "docs/prompts/PROMPTS_LIBRARY"
-
-  # חובה  תיקית Human Edit Mode חייבת להיות קיימת
-  # חובה  אסור לשנות את שמה או את מיקומה
   humanEditFolder: "docs/prompts/HUMAN_EDIT_MODE"
 
   files:
-    # חובה  כל הקבצים הבאים הם חלק מהשיטה
-    # חובה  אסור לשנות שמות קבצים ללא עדכון השיטה
     understandContext: "prompt_understand_context.mini.md"
     prepareStep: "prompt_prepare_step.mini.md"
     executeTask: "prompt_execute_task.mini.md"
@@ -132,27 +176,43 @@ prompts:
     updateLog: "prompt_update_log.mini.md"
     prepareCommit: "prompt_prepare_commit.mini.md"
     preparePullRequest: "prompt_prepare_pull_request.mini.md"
+    generateSummary: "prompt_generate_summary.mini.md"
+    mainOrchestration: "prompt_main_orchestration.mini.md"
 
   humanEditFiles:
-    # חובה  קבצי Human Edit Mode הם חלק מהשיטה
-    # חובה  אסור לערוך אותם בתוך פרויקט פעיל
     analyzeHumanChanges: "prompt_analyze_human_changes.mini.md"
     humanEditMode: "prompt_human_edit_mode.mini.md"
 
+# ============================================================================
+# AUTOMATION COMMANDS
+# ============================================================================
 
 commands:
-  createBranch: "docs/automation/CREATE_BRANCH.sh"           # דוגמה בלבד לפי מבנה התיקיות שלך
-  stageAndCommit: "docs/automation/STAGE_AND_COMMIT.sh"      # דוגמה בלבד
-  pushBranch: "docs/automation/PUSH_BRANCH.sh"                # דוגמה בלבד
-  openPullRequest: "docs/automation/OPEN_PULL_REQUEST.sh"     # דוגמה בלבד
+  createBranch: "docs/automation/CREATE_BRANCH.sh"
+  stageAndCommit: "docs/automation/STAGE_AND_COMMIT.sh"
+  pushBranch: "docs/automation/PUSH_BRANCH.sh"
+  openPullRequest: "docs/automation/OPEN_PULL_REQUEST.sh"
+
+# ============================================================================
+# FINAL SELF CHECK
+# ============================================================================
 
 selfCheck:
-  checklist: [
-    "All changes align with docs/project/PROJECT_SPEC.mini.md",
-    "No violation of docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md",
-    "Change matches the active task in docs/project/IMPLEMENTATION_PLAN.mini.md",
-    "Unit tests added or updated for each new or changed logic path",
-    "All tests pass locally",
-    "Implementation log in docs/logs/IMPLEMENTATION_LOG.mini.md is updated for this task",
-    "Commit message is clear and scoped to a single task"
-  ]                                                           # חובה עקרונית
+  checklist:
+    - "All changes align with docs/project/PROJECT_SPEC.mini.md"
+    - "No violation of docs/project/ARCHITECTURE_BLUEPRINT.mini.md"
+    - "Change matches the active task in docs/project/IMPLEMENTATION_PLAN.mini.md"
+    - "Unit tests added or updated for each new or changed logic path"
+    - "All tests pass locally"
+    - "Implementation log in docs/logs/IMPLEMENTATION_LOG.mini.md is updated for this task"
+    - "Commit message is clear and scoped to a single task"
+
+# ============================================================================
+# FOOTER – SYSTEM PROTECTION
+# ============================================================================
+
+# This file is a protected system component.
+# It is part of the official Docs-as-System methodology
+# and must not be modified by end users.
+#
+# © 2025 Tomer Kedem

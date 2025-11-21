@@ -1,58 +1,85 @@
-# חובה  קובץ זה הוא חלק משיטת Docs as System mini  
-# חובה  אין לערוך קובץ זה בתוך פרויקט פעיל
-# חובה  שינוי בקובץ זה יתבצע רק בעדכון רשמי של השיטה
+📘 Docs-as-System – mini edition  
+⚠️ System File  
 
-# עדכון לוג הפיתוח  
+This file is part of the official Docs-as-System methodology.  
+Do not modify this file inside an active project.  
+Update this file only through the methodology’s source repository.
 
-מטרה  
-להוסיף רשומת לוג חדשה לקובץ הלוג החי  
-בהתאם למבנה הרשמי שמופיע בקובץ התבנית  
+# Update Development Log
 
-קבצים רלוונטיים  
-נתיב קובץ תבנית הלוג  
-templates/log/IMPLEMENTATION_LOG_TEMPLATE.mini.md  
+## Purpose
+Create a new log entry inside the live implementation log file,  
+following the exact structure defined in the official log template.
 
-נתיב קובץ הלוג החי  
-docs/logs/IMPLEMENTATION_LOG.mini.md  
+## Relevant Files
+Log entry template:  
+`docs/project/templates/log/IMPLEMENTATION_LOG_TEMPLATE.mini.md`
 
-הוראות  
-קרא את קובץ התבנית templates/log/IMPLEMENTATION_LOG_TEMPLATE.mini.md  
-זהה את מבנה הרשומה התקני כפי שהוא מופיע בתבנית  
-זהה את שמות השדות  
-הפורמט של תאריך ושעה  
-מבנה תקציר המשימה  
-שמות הסטטוסים המותרים  
+Live implementation log:  
+`docs/logs/IMPLEMENTATION_LOG.mini.md`
 
-קרא את קובץ הלוג החי docs/logs/IMPLEMENTATION_LOG.mini.md  
-אל תשנה רשומות קיימות  
-אל תמחק רשומות קיימות  
-אל תשנה את מבנה הכותרת אם קיימת  
+## Instructions
 
-הרכב רשומת לוג חדשה המבוססת על התבנית בלבד  
-הצמד למבנה הרשומה כפי שהוא מוגדר בתבנית  
-מלא את השדות לפי המשימה שבוצעה  
-כלול לפחות  
-● תאריך ושעה  
-● מבצע הפעולה  
-● שם השלב  
-● שם המשימה  
-● רשימת קבצים ששונו  
-● תקציר קצר של מה בוצע  
-● תקציר מצב הבדיקות  
-● סטטוס המשימה  
+### 1. Read the log entry template  
+Open:  
+`docs/project/templates/log/IMPLEMENTATION_LOG_TEMPLATE.mini.md`
 
-הוסף את הרשומה החדשה לסוף קובץ הלוג החי  
-שמור על רווחים ורצף קבועים כפי שמופיעים ברשומות קודמות  
-אל תוסיף שדות חדשים שאינם חלק מהתבנית  
-אל תשנה את סדר השדות  
+Identify clearly:
+- The required fields  
+- The exact field order  
+- Date/time format  
+- Summary format  
+- Allowed status values  
 
-תנאי המשך  
-הרשומה החדשה תואמת במדויק את המבנה של התבנית  
-כל השדות הנדרשים מולאו  
-אין שינוי ברשומות קודמות  
-קובץ הלוג שמור תקין  
+### 2. Read the live log file  
+Open:  
+`docs/logs/IMPLEMENTATION_LOG.mini.md`
 
-פלט מצופה  
-רשומת לוג חדשה בקובץ docs/logs/IMPLEMENTATION_LOG.mini.md  
-התואמת לחלוטין למבנה הרשמי המוגדר בקובץ  
-templates/log/IMPLEMENTATION_LOG_TEMPLATE.mini.md  
+Rules:
+- Do not modify existing entries  
+- Do not delete entries  
+- Do not change header structure if present  
+- Never reorder or rewrite the log  
+
+### 3. Build a new log entry  
+The new entry must follow the template exactly.  
+Populate the fields based on the task that was just completed.
+
+Each entry must include:
+- dateTime  
+- actor  
+- stepName  
+- taskName  
+- filesChanged  
+- summary (short and clear)  
+- testsSummary  
+- reviewStatus  
+
+Notes:
+- Use English only  
+- Do not add extra fields  
+- Do not change the order of fields  
+
+### 4. Append the entry  
+Add the new log entry **at the bottom of the file**.  
+Preserve spacing and formatting used in previous entries.
+
+## Continuation Conditions
+- The new entry matches the template exactly  
+- All required fields exist and are filled  
+- No existing entries were changed  
+- The log file remains valid and readable  
+
+## Expected Output
+A new log entry added to:  
+`docs/logs/IMPLEMENTATION_LOG.mini.md`  
+Fully aligned with the official structure defined in:  
+`docs/project/templates/log/IMPLEMENTATION_LOG_TEMPLATE.mini.md`
+
+---
+
+This file is a protected system component.  
+It is part of the official Docs-as-System methodology  
+and must not be modified by end users.
+
+© 2025 Tomer Kedem

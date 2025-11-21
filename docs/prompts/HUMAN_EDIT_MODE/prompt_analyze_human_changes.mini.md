@@ -1,111 +1,121 @@
-# ניתוח שינויים שבוצעו על ידי אדם  
+📘 Docs-as-System – mini edition  
+⚠️ System File  
 
-# חובה  קובץ זה הוא חלק משיטת Docs as System mini  
-# חובה  אין לערוך קובץ זה בתוך פרויקט פעיל  
-# חובה  שינוי בקובץ זה יתבצע רק בעדכון רשמי של השיטה
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file.  
+Update this file only through the methodology’s source repository.
 
-מטרה  
-לנתח בצורה שיטתית שינויים שבוצעו בקוד על ידי אדם  
-להבין את משמעותם  
-לבדוק התאמה למסמכי המערכת  
-ולקבוע אם ניתן להמשיך מחזור פיתוח רגיל או שיש לעצור ולבקש הנחיה
+---
 
-קבצים רלוונטיים  
-# חובה  אין לשנות את שמות הקבצים או את מיקומם ללא עדכון השיטה  
-docs/project/BUSINESS_REQUIREMENTS.mini.md  
+# Analyze Human Changes
+
+## Purpose  
+Allow the agent to analyze manual changes made by a human  
+without fixing anything  
+without completing missing parts  
+and without automatic continuation  
+while fully respecting all policy rules.
+
+This prompt runs only after  
+prompt_human_edit_mode.mini.md  
+and only under explicit human instruction.
+
+## Relevant Files  
+
+docs/agent/HUMAN_OPERATIONAL_POLICY.mini.md  
+docs/agent/AGENT_OPERATIONAL_POLICY.mini.md  
 docs/project/PROJECT_SPEC.mini.md  
-docs/project/IMPLEMENTATION_PLAN.mini.md  
-docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md  
+docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
 docs/logs/IMPLEMENTATION_LOG.mini.md  
 
-## זיהוי השינויים שבוצעו על ידי אדם  
-זהה את כל הקבצים ששונו מאז המחזור הקודם  
-השווה בין הגרסה הנוכחית של הקבצים לבין הגרסה הקודמת  
-זהה לכל קובץ בנפרד  
-איזה קטעי קוד התווספו  
-איזה קטעי קוד הוסרו  
-איזה קטעי קוד עודכנו  
-שמור לעצמך תמונת מצב מלאה של היקף השינוי האנושי
+---
 
-## ניתוח איכותי של השינוי  
-קבע עבור כל שינוי  
-האם מדובר בתיקון נקודתי  
-האם מדובר בהוספת התנהגות  
-האם מדובר בשינוי היגיון קיים  
-האם מדובר בשינוי מבני רחב  
-בדוק אם השינוי נוגע  
-ללוגיקה עסקית  
-לזרימת תרחישים  
-לטיפול בשגיאות  
-לביצועים  
-לאבטחה  
+## Instructions  
 
-## בדיקת התאמה למסמכים  
-השווה את השינוי למסמכים הרשמיים  
+Read all the files manually edited by the human  
+Identify every difference between them  
+and their original versions  
 
-מול BUSINESS_REQUIREMENTS  
-בדוק אם השינוי משרת את הצרכים העסקיים הידועים  
-או סותר אותם  
-או מוסיף התנהגות שלא תוארה  
+Cross check these differences against the core project documents:  
+• docs/project/PROJECT_SPEC.mini.md  
+• docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
+• docs/project/IMPLEMENTATION_PLAN.mini.md  
+• docs/logs/IMPLEMENTATION_LOG.mini.md (latest entry only)  
 
-מול PROJECT_SPEC  
-בדוק אם השינוי מתאים להתנהגות המתוארת עבור הרכיב הרלוונטי  
-מבחינת קלט  
-פלט  
-שגיאות  
-ותרחישים מיוחדים  
+Read the content of each of these files  
+Determine how the human change affects them  
+Mark alignments  
+Mark contradictions  
+Mark any point that may break the work cycle  
 
-מול ARCHITECTURE_BLUEPRINT  
-בדוק אם השינוי שומר על גבולות שכבות  
-על גבולות מודולים  
-ועל מבנה התלויות  
-בדוק שאין הדבקה ישירה של לוגיקה בין אזורים שאסור שיידבקו  
+Prepare a professional and clear analysis containing:  
+• What changes were made  
+• Whether the change aligns with project documents  
+• Whether there is a contradiction with any document  
+• Whether the change belongs to the active task  
+• Whether the change affects dependencies  
+• Whether documents require updates  
+• Whether existing tests cover the new behavior  
 
-מול IMPLEMENTATION_PLAN  
-בדוק אם השינוי שייך לשלב פעיל  
-ולמשימה קיימת  
-או שהוא עומד מחוץ לתוכנית  
+---
 
-## הערכת רמת סיכון  
-סווג כל שינוי לפי רמת סיכון  
-שינוי בקובץ רגיש  
-שינוי המשפיע על כמה רכיבים במקביל  
-שינוי בלוגיקה עסקית מרכזית  
-שינוי במנגנוני אבטחה או הרשאות  
-שינוי בזרימת נתונים בין שכבות  
+## Boundaries  
 
-אם זוהה שינוי מסוכן  
-סמן לעצמך שהמשך העבודה דורש תשומת לב מיוחדת  
-ואישור מפורש מאדם  
+Do not fix anything  
+Do not complete code  
+Do not create new files  
+Do not update the log  
+Do not update documents  
+Do not suggest refactor  
+Do not propose merges  
+Do not commit  
+Do not push  
 
-## בדיקות נדרשות  
-בדוק האם קיימות בדיקות יחידה הקשורות לקוד ששונה  
-בדוק אם הן עודכנו או עדיין בגרסה ישנה  
-אם הבדיקות אינן תואמות את השינוי  
-או לא קיימות כלל  
-סמן זאת כפער הדורש טיפול  
+The purpose is analysis only  
+Not action  
 
-אין ליצור או לעדכן בדיקות ביחס לשינוי האנושי  
-לפני קבלת הנחיה מפורשת לכך  
-משימתך בשלב זה היא ניתוח בלבד  
+---
 
-## תנאי עצירה מחייבים  
-# חובה  בכל אחד מהמצבים הבאים עליך לעצור ולא להמשיך לפעול  
-כאשר השינוי סותר את מסמכי המערכת  
-כאשר השינוי אינו חלק ממשימה קיימת  
-כאשר השינוי משנה את מבנה הארכיטקטורה ללא עדכון תואם  
-כאשר השינוי משפיע על קבצים רגישים  
-כאשר אין בדיקות מתאימות לשינוי שבוצע  
+## Presenting the Situation to the Human  
 
-בכל אחד מהמצבים  
-עצור  
-סכם לעצמך את מצבך  
-ובקש הנחיה מפורשת מאדם לפני פעולה נוספת  
+Prepare a clean and clear summary  
+Present to the human:  
+• A full picture of what changed  
+• Risk evaluation  
+• Identification of conflicts  
+• Parts that need instruction  
+• Questions the agent must ask before continuing  
 
-## פלט מצופה  
-רשימת שינויים מפורטת לפי קבצים  
-תיאור ברור של מה השתנה  
-סיווג רמת הסיכון עבור השינוי  
-חיווי אם השינוי תואם למסמכים או סותר אותם  
-החלטה אם ניתן להמשיך מחזור פיתוח רגיל  
-או שיש לעצור ולבקש הנחיה מאדם
+The development cycle must not continue  
+until the human provides a clear decision  
+
+---
+
+## Continuation Conditions  
+
+The human chooses one of the following:  
+• Approve the change as is  
+• Request additional manual edits  
+• Request document updates  
+• Open a new task  
+• Return to the regular development cycle  
+• Pause the process until further clarification  
+
+---
+
+## Expected Output  
+
+A concise, professional analysis  
+Based strictly on project documents  
+Presented to the human  
+Without code modification  
+Without automatic continuation  
+And without performing any additional action  
+
+---
+
+This file is a protected system component.  
+It is part of the official Docs-as-System methodology  
+and must not be modified by end users.
+
+© 2025 Tomer Kedem

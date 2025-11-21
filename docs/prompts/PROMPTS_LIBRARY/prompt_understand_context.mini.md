@@ -1,37 +1,54 @@
-# חובה  קובץ זה הוא חלק משיטת Docs as System mini  
-# חובה  אין לערוך קובץ זה בתוך פרויקט פעיל
-# חובה  שינוי בקובץ זה יתבצע רק בעדכון רשמי של השיטה
+📘 Docs-as-System – mini edition  
+⚠️ System File  
 
-# הבנת הקשר לפני פעולה  
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file.  
+Update this file only through the methodology’s source repository.
 
-מטרה  
-ליצור הבנה מלאה של ההקשר לפני כל פעולה במערכת
+---
 
-הוראות  
-קרא את המסמכים הרלוונטיים למשימה הנוכחית  
-מצא את החלק המתאר את הזרימה המתאימה  
-בדוק את ההתנהגות המצופה  
-בדוק את הגבולות של הרכיב  
-אתר תלות בין תהליכים  
-בדוק אם קיימת מגבלה על קבצים  
-סכם לעצמך את ההבנה  
-עצור אם יש חוסר בהירות
+# Understand Context Before Action
 
-מסמכים לקריאה  
-● docs/project/BUSINESS_REQUIREMENTS.mini.md  
-● docs/project/PROJECT_SPEC.mini.md  
-● docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md  
-● docs/project/IMPLEMENTATION_PLAN.mini.md  
-● docs/logs/IMPLEMENTATION_LOG.mini.md  
-● docs/agent/AGENT_CONFIG.mini.yaml  
-● כל רשומה רלוונטית בלוג
+## Purpose  
+Create a complete understanding of the context before performing any action inside the system.
 
-תנאי המשך  
-ההקשר ברור  
-אין חלק חסר  
-אין התנגשות בין מסמכים  
-אין ספק לגבי המשימה
+## Instructions  
 
-פלט מצופה  
-הבנת הקשר מלאה ומדויקת  
-המוכנות לביצוע המשימה הבאה
+• Read all documents relevant to the current task  
+• Locate the flow that matches the task  
+• Verify the expected behavior  
+• Identify component boundaries  
+• Identify dependencies between processes  
+• Check if any file limitations exist  
+• Summarize your understanding  
+• Stop if anything is unclear  
+
+## Documents to Read  
+
+• docs/project/BUSINESS_REQUIREMENTS.mini.md  
+• docs/project/PROJECT_SPEC.mini.md  
+• docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
+• docs/project/IMPLEMENTATION_PLAN.mini.md  
+• docs/logs/IMPLEMENTATION_LOG.mini.md  
+• docs/agent/AGENT_CONFIG.mini.yaml  
+• Any relevant log entries  
+
+## Continuation Conditions  
+
+• Context is fully understood  
+• No missing parts  
+• No contradictions between documents  
+• No doubt regarding the task  
+
+## Expected Output  
+
+• A complete and accurate understanding of the context  
+• Full readiness for executing the next task  
+
+---
+
+This file is a protected system component.  
+It is part of the official Docs-as-System methodology  
+and must not be modified by end users.
+
+© 2025 Tomer Kedem

@@ -1,205 +1,215 @@
-<div dir="rtl" style="text-align: right;">
+> ⚠️ System File  
+> This is an official Docs as System mini core document.  
+> End users must not modify this file.  
+> Only update this template through the methodology’s source repository.
 
 # Human Operational Policy mini  
-מסמך מדיניות המתאר כיצד האדם מוביל את תהליך הפיתוח  
-מאשר משימות  
-שומר על כיוון מקצועי  
-ומפקח על עבודת הסוכן בצורה יציבה וברורה
+A policy document describing how the human leads the development process  
+Approves tasks  
+Maintains professional direction  
+And supervises the agent’s work in a stable and predictable way
 
-מסמך בפועל  
+Actual file location  
 docs/agent/HUMAN_OPERATIONAL_POLICY.md
 
-יוצר  
-אדם
+Created by  
+Human
 
-מאשר  
-בעל תפקיד טכני בכיר
+Approved by  
+A senior technical authority
 
-> הערה חשובה  
-> זהו מסמך תבניתי. הדוגמאות בו מיועדות להמחשה בלבד.  
-> יש להתאים כל סעיף למבנה הצוות ולסוג המערכת.
-
----
-
-## מטרת המסמך  
-לקבוע כיצד האדם מנהל ומשגיח על תהליכי הפיתוח בשילוב עם הסוכן  
-המטרה אינה להכביד אלא ליצור מסגרת ברורה שמבטיחה עבודה נכונה  
-מקצועית  
-ועקבית  
-ללא הפתעות
-
-האדם שומר על יציבות המערכת  
-בודק שכל פעולה מאושרת ומדויקת  
-ומונע מהסוכן לבצע שינויים שאינם חלק מהשלב
+> Important Note  
+> This is a template document. The examples here are for illustration only.  
+> Each section must be adapted to the structure of the team and the type of system.
 
 ---
 
-## תפקיד האדם במערכת  
-האדם הוא הגורם האחראי על  
-● הבנת ההקשר הרחב  
-● קבלת החלטות מקצועיות  
-● שמירה על התאמה למסמכים  
-● בחירת שלבים לביצוע  
-● הנחיית הסוכן בעת ספק  
-● אישור כל משימה שהסוכן מבצע  
-● מיזוג הקוד לענפים חשובים  
-● תיעוד החלטות משמעותיות
+## Purpose of the Document  
+To define how the human manages and oversees development processes together with the agent  
+The goal is not to complicate the workflow, but to create a clear framework that ensures correct  
+Professional  
+And consistent execution  
+Without surprises
 
-הסוכן מבצע  
-האדם מכוון  
-שניהם יחד עובדים כמערכת אחת
+The human maintains system stability  
+Ensures that every action is validated and accurate  
+And prevents the agent from performing changes that are not part of the defined step
 
 ---
 
-## אחריות על המסמכים  
-האדם אחראי לכך שהמסמכים הבאים תמיד עדכניים  
+## The Human’s Role in the System  
+The human is responsible for  
+● Understanding the broader context  
+● Making professional decisions  
+● Ensuring alignment with all documents  
+● Selecting which steps will be executed  
+● Guiding the agent whenever there is uncertainty  
+● Approving every task performed by the agent  
+● Merging code into important branches  
+● Documenting significant decisions
+
+The agent executes  
+The human directs  
+Together they operate as one integrated system
+
+---
+
+## Responsibility Over Documentation  
+The human is responsible for keeping the following documents up to date  
 ● Business Requirements mini  
 ● Project Specification mini  
 ● Architecture Blueprint mini  
 ● Implementation Plan mini  
 ● Agent Configuration mini yaml
 
-כאשר המסמכים אינם עדכניים  
-הסוכן עלול לבצע פעולות שגויות  
-לכן חובה על האדם לשמור על עדכניות ודיוק
+If the documents are not updated  
+The agent may perform incorrect actions  
+Therefore the human must keep them accurate and current
 
 ---
 
-## איך האדם בודק משימה  
-בדיקת המשימה אינה בדיקה של שורת קוד  
-אלא בדיקת עומק לוגית מול התוכנית
+## How the Human Reviews a Task  
+Task review is not checking a single line of code  
+It is a logical review against the overall plan
 
-האדם בודק  
-● האם הקוד מתאים לאפיון הלוגי  
-● האם השינוי תואם את הבלופרינט  
-● האם המשימה נסגרה לפי התוכנית  
-● האם כל הבדיקות עברו  
-● האם נוצר תיעוד בלוג  
-● האם יש חריגה מהתנהגות מצופה
+The human checks  
+● Whether the code matches the logical specification  
+● Whether the change aligns with the blueprint  
+● Whether the task is completed according to plan  
+● Whether all tests passed  
+● Whether a log entry was created  
+● Whether there is any unexpected deviation
 
-האדם מאשר רק לאחר בדיקה ברורה ומלאה
-
----
-
-## איך האדם מתקן התנהגות של הסוכן  
-במקרה של חריגה  
-האדם חייב להיות ברור  
-ממוקד  
-וכזה שמונע הישנות
-
-האדם  
-● מדגיש את החלק במסמך שלא כובד  
-● מסביר מה היה צריך לקרות  
-● מגדיר מחדש את המשימה אם צריך  
-● מאשר התחלה מחדש של הפעולה
-
-האדם הוא הגורם שמייצר גבולות ברורים לסוכן
-
-## אחריות האדם על Git  
-האדם הוא בעל הסמכות הבלעדית לפעולות שמשנות את ההיסטוריה או את מבנה הענפים  
-הסוכן פועל רק לפי הרשאות מוגדרות מראש
-
-האדם אחראי על  
-● יצירת ענפים אסטרטגיים  
-● מיזוג קוד לענפים חשובים  
-● טיפול בקונפליקטים  
-● ניהול גרסאות  
-● סקירה מלאה של שינויים לפני מיזוג  
-● הגדרת מבנה ענפים קבוע וברור
-
-הסוכן רשאי לעבוד רק בענפים שנועדו לפיתוח השוטף  
-האדם שומר על סדר  
-הסוכן מבצע את העבודה הטכנית בלבד
+The human approves only after a full and clear review
 
 ---
 
-## ניהול התקדמות לאורך הפרויקט  
-האדם אחראי לנהל את ההתקדמות לפי תוכנית הפיתוח  
-הוא בוחר את השלב הבא  
-מסמן שלבים סגורים  
-ומוודא שהסוכן אינו קופץ בין משימות
+## How the Human Corrects Agent Behavior  
+In case of deviation  
+The human must be clear  
+Focused  
+And ensure the issue does not repeat
 
-האדם  
-● בוחר שלב מתוך התוכנית  
-● מאשר התחלת שלב  
-● בודק משימות שהסוכן מבצע  
-● מוודא שהתיעוד בלוג שלם ומדויק  
-● מחליט מתי לעבור לשלב הבא
+The human  
+● Points to the exact document section that was not followed  
+● Explains what should have happened  
+● Redefines the task if needed  
+● Approves restarting the action
 
-האדם מונע מצב שבו המערכת מתקדמת ללא בקרה  
-ומוודא קצב נכון של פיתוח
+The human establishes clear boundaries for the agent
 
 ---
 
-## עבודה בצוות  
-כאשר כמה מתכנתים עובדים יחד  
-האדם הוא הגורם המאחד את התמונה המלאה  
-והאחראי על תיאום בין מפתחים וסוכן
+## Human Responsibility for Git  
+The human has exclusive authority over actions that alter history or branch structure  
+The agent works only under predefined permissions
 
-האדם מבצע  
-● חלוקת משימות בין מתכנתים  
-● שמירה על עקביות בין חלקי המערכת  
-● בדיקה שמשימות לא חותכות זו את זו  
-● טיפול בתלויות בין שלבים  
-● הנחיית הסוכן במקומות שבהם יש רגישות
+The human is responsible for  
+● Creating strategic branches  
+● Merging code into important branches  
+● Handling conflicts  
+● Version management  
+● Full review of changes before any merge  
+● Defining a stable and clear branch structure
 
-הסוכן עובד לפי תבנית קבועה  
-המתכנתים עובדים לפי משימות  
-והאדם מוודא שהכל מתכנס לכיוון אחד ברור
-
----
-
-## סגירת שלב  
-שלב נחשב סגור רק לאחר שהאדם מאשר שהכל הושלם כראוי
-
-האדם בודק  
-● שכל המשימות בשלב מסומנות כסגורות  
-● שכל הבדיקות עברו  
-● שאין חריגות שלא תועדו  
-● שכל הקבצים התעדכנו בהתאם למסמכים  
-● שכל הרשומות בלוג הושלמו  
-● שה Pull Request מוכן לבדיקה
-
-האדם הוא הסמכות שמסיימת את השלב  
-הסוכן אינו סוגר שלב בעצמו
+The agent may work only in branches intended for regular development  
+The human maintains order  
+The agent performs the technical work only
 
 ---
 
-## התנהגות בעת ספק  
-כאשר מתקבלת תוצאה לא ברורה מהסוכן  
-האדם חייב לעצור ולתת הכוונה מלאה
+## Managing Progress Throughout the Project  
+The human is responsible for managing progress according to the development plan  
+Selecting the next step  
+Marking completed steps  
+And ensuring the agent does not jump between tasks
 
-האדם  
-● מחדד את המשימה  
-● מסיר עמימות  
-● עדכן מסמך אם יש צורך  
-● מאשר התחלה מחדש  
-● מונע התקדמות לא רצויה
+The human  
+● Selects a step from the plan  
+● Approves starting the step  
+● Reviews tasks executed by the agent  
+● Ensures the implementation log is complete and accurate  
+● Decides when it is time to move to the next stage
 
-האדם אחראי לכך שהסוכן אינו מנחש  
-ואינו מתקן מעבר למה שהוגדר
+The human prevents uncontrolled advancement  
+And ensures a proper development pace
 
 ---
 
-## סיכום  
-מסמך Human Operational Policy mini מגדיר את דרך הפעולה של האדם בתוך מערכת הפיתוח  
-האדם קובע את הקצב  
-את הכיוון  
-את העלאת הרמה המקצועית  
-ואת היציבות של המערכת
+## Working in a Team  
+When multiple developers work together  
+The human is the one who maintains the full picture  
+And coordinates between developers and the agent
 
-המסמך מבטיח  
-● עבודה מסודרת  
-● דיוק מקצועי  
-● בקרה מלאה על הסוכן  
-● חלוקת משימות נכונה  
-● תיעוד עקבי  
-● פיתוח בטוח
+The human  
+● Distributes tasks among developers  
+● Maintains consistency between different parts of the system  
+● Ensures tasks do not interfere with each other  
+● Handles dependencies between steps  
+● Guides the agent in sensitive areas
 
-האדם והסוכן פועלים יחד  
-כאשר האדם מוביל  
-והסוכן מבצע  
-במסגרת ברורה שמייצרת תהליכי פיתוח אמינים ועקביים
+The agent follows a predictable pattern  
+Developers follow assigned tasks  
+And the human ensures everything aligns toward one clear direction
 
+---
 
-</div>
+## Closing a Stage  
+A stage is considered complete only after the human confirms everything was properly finished
+
+The human checks  
+● That all tasks in the stage are marked as complete  
+● That all tests passed  
+● That there are no undocumented deviations  
+● That all files were updated according to the documents  
+● That all log entries were written  
+● That the Pull Request is ready for review
+
+The human is the authority that closes the stage  
+The agent does not close stages independently
+
+---
+
+## Behavior in Case of Uncertainty  
+When the agent returns a result that is unclear  
+The human must pause and provide full guidance
+
+The human  
+● Clarifies the task  
+● Removes ambiguity  
+● Updates a document if necessary  
+● Approves restarting the task  
+● Prevents unintended progress
+
+The human ensures the agent does not guess  
+And does not fix issues beyond what was defined
+
+---
+
+## Summary  
+The Human Operational Policy mini defines how the human operates within the development system  
+The human sets the pace  
+The direction  
+The professional standard  
+And the stability of the system
+
+The document ensures  
+● Organized work  
+● Professional accuracy  
+● Full oversight over the agent  
+● Proper division of tasks  
+● Consistent documentation  
+● Safe development
+
+The human and the agent work together  
+With the human leading  
+And the agent executing  
+Within a clear framework that supports reliable and consistent development
+
+---
+
+This document is a protected system file.  
+It is part of the official Docs as System mini methodology  
+and must not be modified by end users.
+
+Copyright © 2025 Tomer Kedem

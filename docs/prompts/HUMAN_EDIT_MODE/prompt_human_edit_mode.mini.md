@@ -1,172 +1,98 @@
-# חובה  קובץ זה הוא חלק משיטת Docs as System mini  
-# חובה  אין לערוך קובץ זה בתוך פרויקט פעיל  
-# חובה  שינוי בקובץ זה יתבצע רק בעדכון רשמי של השיטה
+📘 Docs-as-System – mini edition  
+⚠️ System File  
 
-# הפעלה במצב שינוי אנושי
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file.  
+Update this file only through the methodology’s source repository.
 
-מטרה  
-להתמודד עם מצב שבו אדם ערך קבצים באופן ידני  
-מחוץ למחזור הפיתוח התקני  
-ולעצור את הסוכן עד לקבלת כיוון ברור  
-מבלי לאפשר המשך עבודה אוטומטית
+---
 
-הקובץ רלוונטי מיד לאחר זיהוי שינוי אנושי  
-במהלך  
-● self check  
-● update log  
-● prepare commit  
-● prepare pull request  
+# Human Edit Mode
 
-קבצים רלוונטיים  
+## Purpose  
+Handle any situation where a human manually edited files  
+outside the regular development cycle.  
+The agent must stop immediately  
+and wait for clear human guidance  
+without allowing automatic continuation  
+or attempting to fix anything.
+
+This prompt becomes relevant immediately after detecting a human change during:  
+• self check  
+• update log  
+• prepare commit  
+• prepare pull request  
+
+## Relevant Files  
 docs/agent/HUMAN_OPERATIONAL_POLICY.mini.md  
 docs/agent/AGENT_OPERATIONAL_POLICY.mini.md  
 docs/logs/IMPLEMENTATION_LOG.mini.md  
 
-## הוראות פעולה  
+---
 
-עצור את כל רצף המחזור  
-אל תתקדם לשלב הבא  
-אל תבצע commit  
-אל תיצור PR  
-אל תנסה לתקן את השינוי בעצמך  
+## Instructions  
 
-זהה את הקבצים שהאדם ערך  
-זהה את סוג השינוי  
-זהה האם השינוי עומד במסמכי הפרויקט  
+Stop the entire development cycle  
+Do not continue to the next stage  
+Do not perform a commit  
+Do not create a pull request  
+Do not attempt to fix the change  
 
-כתוב סיכום קצר וברור לאדם המכיל  
-● אילו קבצים זוהו  
-● מה ההבדלים שנמצאו  
-● אילו חלקים משפיעים על המשימה  
-● האם יש סתירה למסמכים  
-● האם השינוי דורש עדכון לוג  
-● האם יש צורך להפעיל בדיקות  
+Identify the files that the human edited  
+Identify the type of change  
+Identify whether the change aligns with the project documents  
 
-אל תפרש את כוונת האדם  
-אל תנחש  
-אל תסיק מסקנות לוגיות  
-אל תתקן  
-הסוכן מחכה להנחיה  
+Prepare a short, clear summary for the human containing:  
+• Which files were detected  
+• What differences were found  
+• Which parts affect the current task  
+• Whether there is any contradiction with project documents  
+• Whether the change requires a log update  
+• Whether tests are needed  
 
-## כללים מחייבים  
-אין להמשיך במחזור הפיתוח  
-אין לנסות לשלב קוד ששונה ידנית  
-אין לבצע commit  
-אין לבצע push  
-אין לבצע refactor  
-אין לעדכן מסמכים  
-אין לבצע בדיקות לוגיות ללא בקשת האדם  
+Do not interpret the human’s intention  
+Do not guess  
+Do not draw logical conclusions  
+Do not fix anything  
+The agent must wait for instruction  
 
-## תנאי המשך  
-האדם מספק הנחיה ברורה  
-האדם מציין  
-● האם השינוי היה מכוון  
-● האם יש לעדכן מסמכים  
-● האם יש להפעיל ניתוח שינויים  
-● האם יש לחזור למשימה  
-● האם לפתוח משימה חדשה  
+---
 
-## פלט מצופה  
-סיכום ברור וקצר  
-המוצג לאדם  
-ללא כל שינוי בקוד  
-ללא כל פעולה נוספת  
-ומאפשר לאדם לקבל החלטה  
+## Mandatory Rules  
 
-# חובה  קובץ זה הוא חלק משיטת Docs as System mini  
-# חובה  אין לערוך קובץ זה בתוך פרויקט פעיל  
-# חובה  שינוי בקובץ זה יתבצע רק בעדכון רשמי של השיטה
+• Do not continue the development cycle  
+• Do not merge manually changed code  
+• Do not commit  
+• Do not push  
+• Do not refactor  
+• Do not update documents  
+• Do not run logical tests unless requested by the human  
 
-# ניתוח שינויים שבוצעו על ידי אדם
+---
 
-מטרה  
-לאפשר לסוכן לנתח שינויים ידניים שביצע האדם  
-ללא ביצוע תיקונים  
-ללא ניסיונות השלמה  
-וללא המשך אוטומטי  
-תוך שמירה מלאה על כללי המדיניות
+## Continuation Conditions  
 
-קובץ זה מופעל רק לאחר  
-prompt_human_edit_mode.mini.md  
-ובהנחיית האדם בלבד
+The human provides a clear instruction specifying:  
+• Whether the change was intentional  
+• Whether documents should be updated  
+• Whether a change analysis should run  
+• Whether to return to the task  
+• Whether to open a new task  
 
-קבצים רלוונטיים  
-docs/agent/HUMAN_OPERATIONAL_POLICY.mini.md  
-docs/agent/AGENT_OPERATIONAL_POLICY.mini.md  
-docs/project/PROJECT_SPEC.mini.md  
-docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md  
-docs/logs/IMPLEMENTATION_LOG.mini.md  
+---
 
-## הוראות פעולה  
+## Expected Output  
 
-קרא את כל הקבצים שהאדם ערך בפועל  
-זהה את כל ההבדלים בינם לבין הגרסאות המקוריות  
+A short and clear summary  
+Presented to the human  
+Without any code modification  
+Without any additional action  
+Allowing the human to decide how to continue  
 
-צליב את ההבדלים מול הקבצים המהותיים של הפרויקט  
-● docs/project/PROJECT_SPEC.mini.md  
-● docs/architecture/ARCHITECTURE_BLUEPRINT.mini.md  
-● docs/project/IMPLEMENTATION_PLAN.mini.md  
-● docs/logs/IMPLEMENTATION_LOG.mini.md  הרשומה האחרונה בלבד  
+---
 
-קרא את תוכן כל אחד מהקבצים האלו  
-בדוק כיצד השינוי האנושי משפיע עליהם  
-סמן התאמות  
-סמן חריגות  
-וסמן נקודות שעלולות לשבור את רצף העבודה  
+This file is a protected system component.  
+It is part of the official Docs-as-System methodology  
+and must not be modified by end users.
 
-הכן ניתוח מקצועי וברור המכיל  
-● אילו שינויים בוצעו  
-● האם השינוי תואם למסמכים  
-● האם קיימת סתירה למסמך מסוים  
-● האם השינוי חלק מהמשימה  
-● האם השינוי משפיע על תלויות אחרות  
-● האם השינוי דורש עדכון מסמכים  
-● האם הבדיקות הקיימות מכסות את המצב החדש  
-
-
-## גבולות פעולה  
-אל תבצע תיקונים  
-אל תנסה להשלים קוד  
-אל תיצור קובץ חדש  
-אל תעדכן את הלוג  
-אל תתקן את המסמכים  
-אל תציע refactor  
-אל תציע מיזוגים  
-אל תבצע commit  
-אל תבצע push  
-
-המטרה היא ניתוח בלבד  
-ולא פעולה בפועל  
-
-## הצגת מצב לאדם  
-
-הכן סיכום נקי וברור  
-הצג לאדם  
-● תמונת מצב מלאה  
-● הערכת סיכונים  
-● זיהוי נקודות קונפליקט  
-● אילו חלקים דורשים הנחיה  
-● כל שאלה שהסוכן צריך לשאול כדי להמשיך  
-
-אין להמשיך במחזור  
-עד שהאדם מספק החלטה ברורה  
-
-## תנאי המשך  
-
-האדם בוחר באחת מהאפשרויות  
-● לאשר את השינוי כפי שהוא  
-● לבקש תיקון ידני נוסף  
-● לבקש עדכון מסמכים  
-● לפתוח משימה חדשה  
-● לחזור למחזור הפיתוח הרגיל  
-● לעצור את התהליך עד להבהרות נוספות  
-
-## פלט מצופה  
-
-ניתוח תמציתי  
-מקצועי  
-מבוסס על מסמכי הפרויקט  
-מוצג לאדם  
-ללא שינוי בקוד  
-ללא המשך אוטומטי  
-וללא פעולה נוספת  
+© 2025 Tomer Kedem

@@ -1,146 +1,176 @@
-<div dir="rtl" style="text-align: right;">
-# Implementation Log mini  
-מסמך יומן המתעד כל שלב ומשימה שבוצעו במערכת  
-על ידי אדם, סוכן או שניהם יחד.  
-התיעוד קצר, קריא ויציב כדי לאפשר מעקב אמיתי אחרי התקדמות הפיתוח.
+📘 Docs-as-System – mini edition  
+⚠️ System File  
 
-מסמך בפועל  
-docs/logs/IMPLEMENTATION_LOG.md
-
-יוצר  
-הסוכן או האדם בהתאם למשימה
-
-מאשר  
-בעל תפקיד טכני או מנהל פיתוח
-
-> הערה חשובה  
-> זהו מסמך תבניתי. כל הרשומות בדוגמאות הן להמחשה בלבד.  
-> יש להתאים כל רשומה למשימה בפועל ולשמור על מבנה אחיד לכל אורך הפרויקט.
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file.  
+Update this file only through the methodology’s source repository.
 
 ---
 
-## מטרת המסמך  
-לתעד בצורה פשוטה וברורה  
-● מה בוצע  
-● מי ביצע  
-● באיזה שלב זה קרה  
-● אילו קבצים השתנו  
-● אילו בדיקות רצו  
-● מה מצב התהליך  
+# Implementation Log Template  
+A structured log entry used to document every task or step  
+performed by a human, an agent, or both together.  
+Entries must remain short, consistent, and easy to scan  
+to support real visibility into the development progress.
 
-התיעוד מאפשר  
-● שקיפות  
-● יכולת למידה של הסוכן  
-● הבנה מהירה של התקדמות הפרויקט  
-● ניתוח תקלות עתידי  
+Actual file location:  
+docs/logs/IMPLEMENTATION_LOG.mini.md
 
-## מבנה רשומת לוג  
-כל רשומה ביומן חייבת להיות קצרה, אחידה וקלה לסריקה.  
-המטרה היא להבין במהירות מה בוצע ומה מצב הפיתוח בכל רגע.
+Creator  
+The agent or the human depending on the task
 
-רשומה כוללת  
-● תאריך ושעה  
-● מבצע הפעולה  
-● שם השלב מתוך תוכנית המימוש  
-● שם המשימה  
-● קבצים ששונו  
-● תיאור קצר  
-● תקציר של בדיקות היחידה  
-● סטטוס סופי של המשימה  
+Approver  
+A technical owner or development lead
+
+> Important Note  
+> This is a template file.  
+> All example entries are for demonstration only.  
+> Each new entry must reflect the actual task  
+> and follow the structure exactly.
 
 ---
 
-## שדות חובה  
-תאריך ושעה  
-רשימתית ומלאה לצורך חקירה עתידית  
-דוגמה  
-2025 05 12 14:32
+## Purpose of the Document  
+Provide clear and simple documentation of:  
+• What was done  
+• Who performed it  
+• Which step it belongs to  
+• Which task was completed  
+• Which files changed  
+• Which tests ran  
+• The final status of the task  
 
-מבצע  
-ערך אחד מתוך  
-● אדם  
-● סוכן  
-● משולב  
-
-שלב  
-שם השלב מתוך ה Implementation Plan
-
-משימה  
-שם המשימה שבוצעה בפועל
-
-קבצים ששונו  
-רשימה קצרה של קבצים שבוצעו בהם שינויים
-
-תקציר  
-משפט אחד המסביר מה נעשה בפועל
-
-בדיקות  
-תיאור קצר של הבדיקות שרצו  
-לדוגמה  
-כל הבדיקות עברו  
-או  
-בדיקת קצה אחת נכשלה ותוקנה
-
-סטטוס  
-ערך אחד בלבד  
-● הושלם  
-● חלקי  
-● נדרש אישור נוסף  
+This log supports:  
+• Transparency  
+• Agent learning  
+• Quick understanding of project progress  
+• Future troubleshooting and analysis  
 
 ---
 
-## דוגמה לרשומת לוג  
-הדוגמה להמחשה בלבד
+## Log Entry Structure  
+Every entry must be short, uniform, and easy to read.  
+The goal is to immediately understand  
+what happened and what the current state is.
 
-רשומה  
-תאריך ושעה  
+Each entry includes:  
+• dateTime  
+• actor  
+• stepName  
+• taskName  
+• filesChanged  
+• summary  
+• testsSummary  
+• reviewStatus  
+
+---
+
+## Required Fields  
+
+### dateTime  
+Full timestamp (YYYY MM DD HH:MM)  
+Example:  
+2025 05 12 14:32  
+
+### actor  
+One of:  
+• human  
+• agent  
+• mixed  
+
+### stepName  
+The name of the step from the Implementation Plan  
+
+### taskName  
+The specific task executed  
+
+### filesChanged  
+A short list of files updated during the task  
+
+### summary  
+One sentence describing what was done  
+
+### testsSummary  
+A short summary of test execution  
+Examples:  
+• All tests passed  
+• One edge case failed and was fixed  
+
+### reviewStatus  
+One of:  
+• completed  
+• partial  
+• needs human approval  
+
+---
+
+## Example Log Entry  
+Demonstration only
+
+**Entry**  
+dateTime  
 2025 05 12 16:20  
-מבצע  
-סוכן  
-שלב  
-בניית רכיב עיבוד ראשוני  
-משימה  
-הוספת בדיקות נתונים ראשוניות  
-קבצים ששונו  
-● src server processor js  
-● tests processor validation test js  
-תקציר  
-נוספו בדיקות לוגיות והותאם קוד קיים לתוצאות  
-בדיקות  
-כל הבדיקות עברו ללא חריגות  
-סטטוס  
-הושלם  
+
+actor  
+agent  
+
+stepName  
+Initial processing component setup  
+
+taskName  
+Add basic data validation tests  
+
+filesChanged  
+• src/server/processor.js  
+• tests/processor/validation.test.js  
+
+summary  
+Added logical validation tests and aligned existing code with results  
+
+testsSummary  
+All tests passed successfully  
+
+reviewStatus  
+completed  
 
 ---
 
-## עקרונות תיעוד  
-היומן אינו מדור תיעוד מורחב  
-אין מקום לפסקאות ארוכות  
-אין צורך לכתוב היסטוריה  
-המטרה היא  
-● לעקוב אחרי התקדמות  
-● לזהות בעיות  
-● לאפשר לסוכן ללמוד משינויים קודמים  
+## Documentation Principles  
 
-כל רשומה חייבת להיות קצרה  
-מדויקת  
-ועקבית במבנה שלה  
+The log is not a detailed history document.  
+There is no place for long paragraphs.  
+No full narrative is required.  
+
+The purpose:  
+• Track progress  
+• Identify issues  
+• Allow the agent to learn from past changes  
+
+Every entry must be:  
+• Short  
+• Accurate  
+• Consistent  
 
 ---
 
-## סיכום  
-Implementation Log mini הוא מסמך תיעוד פשוט ומקצועי  
-הוא עוקב אחרי כל משימה  
-מחזק את היכולת להבין את התקדמות הפרויקט  
-ומאפשר למפתחים ולסוכן ללמוד ולשחזר תהליכים בקלות
+## Summary  
 
-המסמך חי ומתעדכן עם כל ביצוע של משימה  
-והוא חלק בלתי נפרד מ Docs as System mini  
-מאפשר עבודה יציבה  
-נשלטת  
-ומתועדת היטב  
-בתוך צוות ובסביבה שבה סוכן מבצע חלק מהפיתוח בפועל.
+Implementation Log mini is a clean, simple technical log  
+tracking every task performed in the project.  
+It strengthens visibility,  
+helps understand progress,  
+and enables humans and agents  
+to learn and reproduce processes easily.
 
+The log is a living document updated with each completed task  
+and is an essential part of Docs-as-System mini,  
+supporting stable, controlled, and well documented development  
+in environments where an agent performs part of the work.
 
+---
 
-</div>
+This file is a protected system component.  
+It is part of the official Docs-as-System methodology  
+and must not be modified by end users.
+
+© 2025 Tomer Kedem
