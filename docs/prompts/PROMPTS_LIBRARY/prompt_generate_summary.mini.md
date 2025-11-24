@@ -17,11 +17,11 @@ even though the implementation log itself is always written in English.
 
 • The full content of `docs/logs/IMPLEMENTATION_LOG.mini.md`  
 • The project language from `docs/agent/AGENT_CONFIG.mini.yaml`  
-  taken from the field `metadata.language`  
+  taken from the field `metadata.language.docs`  
 • Optional filters provided by the human, for example  
   date range, stage, or task name
 
-If `metadata.language` is missing or invalid,  
+If `metadata.language.docs` is missing or invalid,  
 default to English for the summary.
 
 ## What to Do  
@@ -37,7 +37,7 @@ default to English for the summary.
    • Any relevant notes added by the human  
 
 The summary must be simple, readable and short,  
-and it must be written in the project language defined in `metadata.language`.
+and it must be written in the project language defined in `metadata.language.docs`.
 
 If the human explicitly asks to save the summary to a file,  
 write it under `docs/logs/summaries/`  
@@ -49,8 +49,8 @@ for example:
 ## Language Rules  
 
 • The implementation log is always written in English  
-• The summary must be written in the language from `metadata.language`  
-• If `metadata.language` is not specified or not supported, use English  
+• The summary must be written in the language from `metadata.language.docs`  
+• If `metadata.language.docs` is not specified or not supported, use English  
 • Keep a clear, human tone, not robotic  
 • Do not translate internal identifiers such as file paths, class names or function names
 

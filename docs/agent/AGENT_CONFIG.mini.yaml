@@ -12,10 +12,18 @@
 metadata:
   methodologyName: "Docs-as-System"
   edition: "mini"
-  language: "en"                       # The selected language for project documents  
-                                       # (e.g., "en", "he", "es", etc.)
-                                       # Summaries in docs/logs/summaries will be generated
-                                       # in this language.
+  # ============================================================================
+  # LANGUAGE SETTINGS — DOCUMENT & UI LANGUAGE PREFERENCES
+  # ============================================================================
+
+  language:
+    docs: "en"          # Language used inside the core project documents (BR, SPEC, BLUEPRINT, PLAN)
+                        # User may write documents in any language ("he", "es", "ar", etc.)
+                        # and the AI agent will understand them.
+
+    ui: "en"            # UI language for validation messages in the VS Code extension.
+                        # The extension will present messages, hints and instructions in this language.
+
   versionFile: "VERSION.txt"
 
   projectName: "REPLACE_ME"            # User must update

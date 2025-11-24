@@ -83,7 +83,7 @@ fi
 if [[ "$COMMIT_INCLUDE_TAGS" == "true" ]]; then
   MESSAGE="$MESSAGE
 
-Tags: SCOPE:$COMMIT_SCOPE, DOCS_AS_SYSTEM_MINI"
+Tags: SCOPE:$COMMIT_SCOPE, DOCS_AS_SYSTEM_MINI_EDITION"
 fi
 
 # Build final commit message with optional trailers

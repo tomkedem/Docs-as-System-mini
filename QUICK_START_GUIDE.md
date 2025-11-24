@@ -1,157 +1,152 @@
-# Docs-as-System mini edition – Quick Start Guide
-
-Docs-as-System mini edition is a simple and practical workflow that helps you keep your development clear, consistent, and predictable when working with AI assistants.
-
-You write clean project documents.  
-The agent follows them step by step.  
-No surprises. No guessing. No chaos.
-
-This guide gives you everything you need to start working with the mini edition in minutes.
+📘 Docs-as-System mini edition  
+⚠️ קובץ מערכת  
 
 ---
 
-## 1. What this method gives you
+# מדריך התחלה מהירה
 
-- A clean and consistent workflow  
-- A simple structure that keeps projects understandable  
-- A predictable process for using AI safely  
-- A development rhythm that stays clear over time  
-
-No heavy methodology.  
-No complex rules.  
-Just a lightweight and reliable workflow you can trust.
+מדריך קצר ופשוט שמסביר איך להתחיל לעבוד מהר  
+עם פרויקט חדש בשיטת Docs-as-System mini.
 
 ---
 
-## 2. Initial setup
+## 1. ארבעת המסמכים שחייבים להכין
 
-Before writing any code, create these four project documents:
+מכינים את ארבעת המסמכים בסדר קבוע  
+ובעזרת צאט AI, כאשר:
 
-- `BUSINESS_REQUIREMENTS.mini.md`  
-- `PROJECT_SPEC.mini.md`  
-- `IMPLEMENTATION_PLAN.mini.md`  
-- `ARCHITECTURE_BLUEPRINT.mini.md`
+• האדם מספק את התוכן האמיתי  
+• ה AI עוזר בניסוח, ארגון והשלמת מבנה  
+• האדם מאשר את הגרסה הסופית
 
-You can prepare them with help from any AI assistant.
+המסמכים:
 
-Then open:
+1. **‏Business Requirements**  
+   הבעיה העסקית, ההזדמנות, המטרות, מדדי ההצלחה והסיכונים.  
+   נכתב על ידי האדם בעזרת ה AI.
 
-`docs/agent/AGENT_CONFIG.mini.yaml`
+2. **‏Project Specification**  
+   ההתנהגות הלוגית של המערכת.  
+   נכתב על בסיס Business Requirements בלבד.
 
-Set your project language:
+3. **‏Architecture Blueprint**  
+   המבנה הטכני ורכיבי המערכת.  
+   נכתב על בסיס Business Requirements + Project Specification.
 
-```yaml
-projectLanguage: "en"
+4. **‏Implementation Plan**  
+   שלבי פיתוח, משימות, תלויות ובדיקות.  
+   נכתב על בסיס כל שלושת המסמכים הקודמים.
+
+חשוב  
+כל מסמך נשען על כל המסמכים שקדמו לו.  
+השרשרת מצטברת, לא לינארית.  
+
+הסוכן מבצע כל פעולה רק על בסיס שרשרת המסמכים הזו.
+
+---
+
+## 2. מבנה תיקיות בקווים כללים
+
+מבנה הפרויקט חייב להיראות בערך כך:
+
+```text
+docs/
+  project/        → ארבעת מסמכי הבסיס
+  agent/          → הגדרות ומדיניות של הסוכן
+  prompts/        → ספריית הפרומפטים
+  logs/           → יומן המימוש (Implementation Log)
+  automation/     → סקריפטי Git רשמיים
 ```
 
-That is all you need before starting real work.
 
----
+אין לשנות שמות תיקיות וקבצים, ואין להעביר אותם למקומות אחרים.  
+הסוכן והכלים מסתמכים על מבנה קבוע.
 
-## 3. Daily workflow (7 simple steps)
+## הפעלת הסוכן מתוך VS Code
 
-Use the prompts in `docs/prompts/PROMPTS_LIBRARY` for every task.
+מחזור פיתוח חדש מתחיל תמיד מאותה נקודה  
+חלון ה Agent בצד ימין ב VS Code.
 
-### 1. Understand Context  
-The agent reads the project documents and understands what is needed.
+### שלב 1: פתיחת הפרויקט ב VS Code
 
-### 2. Prepare Step  
-The agent plans the exact work it will perform.
+ודא שהריפו של Docs-as-System mini פתוח  
+ושהנתיבים זהים למבנה הרשמי.
 
-### 3. Execute Task  
-The agent writes or updates the code according to the plan.
+### שלב 2: פתיחת חלון ה Agent
 
-### 4. Self Check  
-The agent verifies the work matches the documents and rules.
+בצד ימין ב VS Code  
+לשונית CHAT או AGENT לפי התצוגה שלך.
 
-### 5. Update Log  
-One short entry per task, always written in English.
+### שלב 3: הדבקת פרומפט ההפעלה הראשי
 
-### 6. Prepare Commit  
-Creates a clean commit using the official script.
+הדבק בחלון ה Agent את הטקסט הבא:
 
-### 7. Prepare Pull Request  
-Creates a draft PR based on the log and documents.
+   Run the full Docs-as-System mini lifecycle using the official orchestration prompt.
 
-This flow keeps your project consistent, clean, and easy to follow.
+   Load and execute the file:
+   docs/prompts/PROMPTS_LIBRARY/prompt_main_orchestration.mini.md
 
----
+ואשר את השליחה.
 
-## 4. A real example
+המשמעות עבור הסוכן:
 
-**Task:**  
-Add a `phoneNumber` field to the User model.
+• לטעון את הקובץ prompt_main_orchestration.mini.md  
+• להריץ את כל מחזור העבודה המוגדר בו לפי הסדר  
+• לא לדלג על שלבים  
+• לא להפעיל פרומפטים אחרים ידנית באמצע  
 
-**The full workflow:**
+## מה הסוכן עושה משם והלאה
 
-- Run **Understand Context**  
-- Run **Prepare Step**  
-- Follow the plan  
-- Run **Execute Task**  
-- Run **Self Check**  
-- Run **Update Log**  
-- Run **Prepare Commit**  
-- Run **Prepare Pull Request**
+בהתאם לשיטה, הפרומפט הראשי אחראי על הרצף הבא:
 
-After one or two tasks, this flow becomes natural.
+קריאת מסמכי היסוד והגדרות הסוכן  
+זיהוי המשימה הבאה מתוך Implementation Plan  
+הצגת תוכנית פעולה לאישור אנושי  
+ביצוע השינויים שנקבעו בלבד  
+הרצת בדיקה עצמית self check  
+עדכון רשומה ב Implementation Log  
+הכנת commit דרך הסקריפט הרשמי  
+פתיחת Pull Request כטיוטה לבדיקה אנושית  
 
----
+אתה בתור אדם:
 
-## 5. Manual coding (when you write code yourself)
+• מאשר או עוצר  
+• לא מפעיל ידנית פרומפטים אחרים באמצע המחזור  
+• לא מריץ פקודות Git כחלק מהפעולה של הסוכן  
 
-You can always write code manually.  
-Just do it safely:
+## חוקי בטיחות קצרים
 
-1. Click **Start manual coding**  
-2. Make your changes  
-3. Click **Finish manual coding**
+הסוכן לא מבצע:
 
-The agent will analyze the changes, update the log if needed, and stay aligned with your documents.
+• שינוי בארבעת מסמכי היסוד  
+• שינוי במסמכי הארכיטקטורה והעסק  
+• עבודה בתיקיות מוגנות  
+• פקודות Git ישירות  
+• המצאת לוגיקה או מבנה מערכת חדשים  
+• יצירה או מחיקה של קבצים מחוץ ל writablePaths  
+• commit בלי רשומה ביומן המימוש  
 
----
+הסוכן כן מחויב:
 
-## 6. What you can do
+• לעצור בכל מצב שאינו ברור  
+• לסכם מה הוא הבין לפני פעולה משמעותית  
+• לשאול שאלות כשחסר מידע  
+• לעמוד בדיוק בתוכנית המימוש  
+• להריץ בדיקה עצמית לפני כל commit  
+• לתעד כל משימה ביומן  
 
-- Edit code inside allowed folders  
-- Update the four project documents  
-- Use the prompts for every step  
-- Switch between manual and agent-driven work  
+## סיום מחזור
 
----
+בסיום מחזור פיתוח אחד:
 
-## 7. What you must not do
+בודקים את ה Pull Request שנפתח כטיוטה  
+מבטיחים שהשינויים תואמים את ארבעת המסמכים  
+מבטיחים שהלוג מעודכן וברור  
+מאשרים וממזגים ידנית אם הכול תקין  
+חוזרים לחלון ה Agent ומריצים שוב את פרומפט ההפעלה למחזור הבא  
 
-- Edit system files in `docs/`  
-- Modify any prompt file  
-- Run Git commands manually  
-- Edit protected paths  
-- Change architecture without updating documents  
+קובץ זה הוא רכיב מערכת מוגן  
+חלק מהשיטה הרשמית של Docs-as-System  
+ואסור לערוך אותו בתוך פרויקט פעיל.
 
-These rules keep the workflow stable and predictable.
-
----
-
-## 8. When is a task complete?
-
-A task is complete when:
-
-- Self Check passes  
-- A log entry is added  
-- A commit is prepared  
-- A PR is created  
-- A human review is requested  
-
----
-
-## 9. Mini cheat sheet
-
-```plaintext
-Understand → Prepare → Execute
-↓
-Self Check → Update Log
-↓
-Commit → Pull Request
-```
-
-Stay inside this loop and your project will remain clear, stable, and easy to maintain.
-
+© 2025 Tomer Kedem
