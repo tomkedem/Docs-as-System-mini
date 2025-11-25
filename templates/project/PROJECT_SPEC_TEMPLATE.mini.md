@@ -1,16 +1,11 @@
-📘 Docs-as-System mini edition – Project Document
+📘 Docs-as-System – mini edition  
+⚠️ System File – TEMPLATE (Do Not Modify)
 
-This document is part of the Docs-as-System mini project structure.  
-You may edit all content under each heading to reflect the real logical behavior of your system.  
-Do not remove, rename, or translate any of the English headings.  
-These headings are required for validation and agent workflows.
-
-You may write all content in your native language.  
-Only the section headings must remain in English for validation.  
-This document must remain in Markdown (.md) format.
-
-Original template location  
-`templates/project/PROJECT_SPEC_TEMPLATE.mini.md`
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file directly.  
+To use it for a real project, copy this file into:  
+`docs/project/PROJECT_SPEC.mini.md`  
+and edit the copy only.
 
 ---
 
@@ -25,17 +20,47 @@ Actual file location
 docs/project/PROJECT_SPEC.mini.md
 
 Creator  
-A human with writing assistance from the agent
+An agent under human supervision
 
 Approver  
 A professional owner responsible for validating the logical behavior of the system
 
 > Important Note  
-> This document was created from the official template.  
-> All example texts below are generic and must be replaced  
-> with the real logical behavior of your specific project.
+> This is a template document.  
+> All examples are for demonstration only.  
+> Every project has a different parent system, different processes,  
+> different actors, and sometimes even completely different goals.  
+> Some projects are created to solve a deep business problem.  
+> Others are built as a new product, a personal tool,  
+> or even a game created for learning or experimentation.  
+> Each part of this document must be adapted to the real context  
+> of the current project only.
 
 ---
+
+<!--
+REQUIRED_SECTIONS:
+- Purpose of this Document
+- System Actors
+- Actor Goals
+- Main Use Cases
+- Overall Logical Flow
+- Logical Events in the System
+- Logical Data Structure
+- Logical Rules
+- Edge Conditions
+- Interactions Between Components
+- Logical Consistency
+- Success Outcomes
+- Failure Outcomes
+- Timing Considerations
+- Logical Integrations with Other Systems
+- System Behavior Principles
+- Logical Flow Diagram
+- Preconditions and Postconditions
+- Decision Based Rules
+- Summary
+-->
 
 ## Purpose of this Document  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
@@ -511,9 +536,9 @@ without room for interpretation.
 
 ---
 
-This document is editable and evolves with the project.  
-Headings must remain unchanged for validation.  
-All other content should be replaced  
-with the real logical details of this project.
+This is a protected template file  
+and must not be edited directly inside a project.  
+To customize it, create or update:  
+`docs/project/PROJECT_SPEC.mini.md`
 
 © 2025 Tomer Kedem

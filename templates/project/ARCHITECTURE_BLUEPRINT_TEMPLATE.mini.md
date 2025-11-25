@@ -1,18 +1,38 @@
-📘 Docs-as-System mini edition – Project Document
+📘 Docs-as-System – mini edition  
+⚠️ System File – TEMPLATE (Do Not Modify)
 
-This document is part of the Docs-as-System mini project structure.  
-You may edit all content under each heading to reflect the real architecture of your system.  
-Do not remove, rename, or translate any of the English headings.  
-These headings are required for validation and agent workflows.
-
-You may write all content in your native language.  
-Only the section headings must remain in English for validation.  
-This document must remain in Markdown (.md) format.
-
-Original template location  
-`templates/project/ARCHITECTURE_BLUEPRINT_TEMPLATE.mini.md`
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file directly.  
+To use it in a real project, copy this file into:  
+`docs/project/ARCHITECTURE_BLUEPRINT.mini.md`  
+and edit the copy only.
 
 ---
+
+<!--
+REQUIRED_SECTIONS:
+- Purpose of this Document
+- System Overview
+- Responsibility Allocation Between Components
+- Core Data Flow
+- System Components
+- Component Responsibilities
+- Responsibility Boundaries
+- Component Dependencies
+- Architectural Rules That Must Not Be Violated
+- System Level Data Structure
+- Timing Management
+- System Events
+- Integrations with External Systems
+- System Consistency
+- Core Architectural Principles
+- Non-Negotiable Rules
+- Reliability and Continuous Operation
+- Exception Handling
+- Updating the System Structure
+- Development Cycles
+- Summary
+-->
 
 # Architecture Blueprint mini  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
@@ -32,9 +52,13 @@ Approver
 System architect or senior technical owner
 
 > Important Note  
-> This document was created from the official template.  
-> All example texts below are generic and must be replaced  
-> with the real architectural details of your specific project.
+> This is a template document. All examples are for illustration only.  
+> Every project may have a completely different structure, technologies,  
+> processes, and dependency models.  
+> The system may be monolithic, message-driven, microservice based,  
+> or even a small experimental tool.  
+> Each section must be adapted to the real technical environment  
+> of the specific project.
 
 ---
 
@@ -86,15 +110,15 @@ General examples
   and business processing  
 • The Presentation Component exposes information to users  
 • Internal Services coordinate background processes  
-• The Execution Agent performs predefined actions  
-  that do not require human judgment  
+• The Execution Agent performs predefined actions that  
+  do not require human judgment  
 
 The goal is to guarantee clarity and separation of concerns.
 
 ---
 
 ## Core Data Flow  
-<!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- DO NOT REMOVE OR OR RENAME THIS HEADING -->
 
 The blueprint must present the system’s primary data flow  
 in a simple, technology-agnostic way.
@@ -480,9 +504,9 @@ and safe for both humans and agents.
 
 ---
 
-This document is editable and evolves with the project.  
-Headings must remain unchanged for validation.  
-All example content should be replaced  
-with the real architectural details of your system.
+This is a protected template file  
+and must not be edited directly inside a project.  
+To customize it, create or update:  
+`docs/project/ARCHITECTURE_BLUEPRINT.mini.md`
 
 © 2025 Tomer Kedem

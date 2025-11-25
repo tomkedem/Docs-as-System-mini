@@ -1,18 +1,41 @@
-📘 Docs-as-System mini edition – Project Document
+📘 Docs-as-System – mini edition  
+⚠️ System File – TEMPLATE (Do Not Modify)
 
-This document is part of the Docs-as-System mini project structure.  
-You may edit all content under each heading to reflect the real development plan of your system.  
-Do not remove, rename, or translate any of the English headings.  
-These headings are required for validation and agent workflows.
-
-You may write all content in your native language.  
-Only the section headings must remain in English for validation.  
-This document must remain in Markdown (.md) format.
-
-Original template location  
-`templates/project/IMPLEMENTATION_PLAN_TEMPLATE.mini.md`
+This file is part of the official Docs-as-System methodology.  
+End users must not modify this file directly.  
+To use it in a real project, copy this file into:  
+`docs/project/IMPLEMENTATION_PLAN.mini.md`  
+and edit the copy only.
 
 ---
+
+<!--
+REQUIRED_SECTIONS:
+- Purpose of this Document
+- Structure of the Plan
+- Dividing Development into Stages
+- Task Structure
+- Task Name
+- Task Objective
+- Task Inputs
+- Actions
+- Required Output
+- Task Distribution Between Developers
+- Task Dependencies
+- Task Completion Conditions
+- Stage List Structure
+- Stage Template Example
+- Agent Workflow Inside Each Stage
+- Writing Unit Tests for Each Task
+- Testing Requirements
+- Working in Parallel
+- Full Example of Development Stages
+- Stage Approval Process Before Merge
+- Preparation for Pull Request
+- Connection to the Log
+- Stage Completion Rules
+- Summary
+-->
 
 # Implementation Plan mini  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
@@ -38,9 +61,13 @@ Approver
 A technical owner responsible for development planning
 
 > Important Note  
-> This document was created from the official template.  
-> All example texts below must be replaced  
-> with the real development plan of your system.
+> This is a template document.  
+> All examples are for demonstration only.  
+> Every project will have different stages, different tasks,  
+> different dependency considerations,  
+> and entirely different development requirements.  
+> Every section must be adapted  
+> to the structure and capability of the current system.
 
 ---
 
@@ -603,9 +630,9 @@ between human and agent.
 
 ---
 
-This document is editable and evolves with the project.  
-Headings must remain unchanged for validation.  
-All example content should be replaced  
-with the real development plan of your system.
+This is a protected template file  
+and must not be edited directly inside a project.  
+To customize it, create or update:  
+`docs/project/IMPLEMENTATION_PLAN.mini.md`
 
 © 2025 Tomer Kedem
