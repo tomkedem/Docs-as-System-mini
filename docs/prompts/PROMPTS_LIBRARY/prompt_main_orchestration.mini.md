@@ -1,8 +1,8 @@
-📘 Docs-as-System – mini edition  
-⚠️ System File  
+📘 Docs-as-System mini edition  
+⚠️ System File – Validation Prompt (Do Not Modify)
 
 This file is part of the official Docs-as-System methodology.  
-End users must not modify this file.  
+End users must not modify this file directly.  
 Update this file only through the methodology’s source repository.
 
 ---
