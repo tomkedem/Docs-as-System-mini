@@ -7,6 +7,8 @@ Update this file only through the methodology’s source repository.
 
 ---
 
+<!-- PROMPT_START -->
+
 # Prompt: Generate Summary  
 Create a clear human friendly summary based on the implementation log.
 
@@ -92,6 +94,8 @@ Stop immediately and return a short explanation if:
 • The project language cannot be determined  
   and using English as fallback also fails for any reason
 
+<!-- PROMPT_END -->
+
 ---
 
 This file is a protected system component.  
@@ -99,3 +103,4 @@ It is part of the official Docs-as-System methodology
 and must not be modified by end users.
 
 © 2025 Tomer Kedem
+

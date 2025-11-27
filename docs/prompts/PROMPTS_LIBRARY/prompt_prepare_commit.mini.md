@@ -7,6 +7,8 @@ Update this file only through the methodology’s source repository.
 
 ---
 
+<!-- PROMPT_START -->
+
 # Prepare Commit
 
 ## Purpose  
@@ -128,6 +130,8 @@ Fully aligned with the task
 Aligned with the log  
 Aligned with the project documents  
 Ready for push or PR creation  
+
+<!-- PROMPT_END -->
 
 ---
 

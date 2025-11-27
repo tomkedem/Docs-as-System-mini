@@ -7,6 +7,8 @@ Update this file only through the methodology’s source repository.
 
 ---
 
+<!-- PROMPT_START -->
+
 # Analyze Human Changes
 
 ## Purpose  
@@ -112,6 +114,8 @@ Without code modification
 Without automatic continuation  
 And without performing any additional action  
 
+<!-- PROMPT_END -->
+
 ---
 
 This file is a protected system component.  
@@ -119,3 +123,4 @@ It is part of the official Docs-as-System methodology
 and must not be modified by end users.
 
 © 2025 Tomer Kedem
+

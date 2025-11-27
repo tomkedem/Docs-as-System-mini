@@ -7,6 +7,8 @@ Update this file only through the methodology’s source repository.
 
 ---
 
+<!-- PROMPT_START -->
+
 # Self Check Before Continuation
 
 ## Purpose  
@@ -34,6 +36,8 @@ Verify that all work performed meets the methodology requirements before continu
 
 • Full internal confirmation that the task aligns with all system documents  
 • Readiness to update the log and proceed to the next step  
+
+<!-- PROMPT_END -->
 
 ---
 

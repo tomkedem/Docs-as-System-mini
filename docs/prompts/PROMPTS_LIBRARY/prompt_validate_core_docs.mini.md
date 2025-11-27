@@ -8,6 +8,8 @@ before any serious development work begins.
 
 ---
 
+<!-- PROMPT_START -->
+
 # Validate core project documents  
 Agent validation prompt for Docs-as-System mini
 
@@ -221,6 +223,7 @@ The goal is to protect the project
 and ensure that when development begins,  
 both the human and the agent rely on solid documents.
 
+<!-- PROMPT_END -->
 
 ---
 

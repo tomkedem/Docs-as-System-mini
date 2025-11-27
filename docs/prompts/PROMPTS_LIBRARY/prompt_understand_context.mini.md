@@ -7,6 +7,8 @@ Update this file only through the methodology’s source repository.
 
 ---
 
+<!-- PROMPT_START -->
+
 # Understand Context Before Action
 
 ## Purpose  
@@ -45,6 +47,8 @@ Create a complete understanding of the context before performing any action insi
 • A complete and accurate understanding of the context  
 • Full readiness for executing the next task  
 
+<!-- PROMPT_END -->
+
 ---
 
 This file is a protected system component.  
@@ -52,3 +56,4 @@ It is part of the official Docs-as-System methodology
 and must not be modified by end users.
 
 © 2025 Tomer Kedem
+

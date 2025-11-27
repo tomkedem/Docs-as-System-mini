@@ -7,6 +7,8 @@ Update this file only through the methodology’s source repository.
 
 ---
 
+<!-- PROMPT_START -->
+
 # Execute Task
 
 ## Purpose  
@@ -42,6 +44,8 @@ The task is considered complete only if:
 • A precise code change that fulfills the task definition  
 • Valid and passing tests  
 • Updated files limited strictly to the task’s scope  
+
+<!-- PROMPT_END -->
 
 ---
 

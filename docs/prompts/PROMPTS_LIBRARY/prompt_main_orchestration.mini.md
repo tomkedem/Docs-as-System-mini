@@ -7,6 +7,8 @@ Update this file only through the methodology’s source repository.
 
 ---
 
+<!-- PROMPT_START -->
+
 # Main Orchestration Prompt  
 Full Development Cycle Controller
 
@@ -242,6 +244,8 @@ ensures a stable, clear, and controlled development process
 that correctly integrates human and agent  
 through a document driven workflow.
 
+<!-- PROMPT_END -->
+
 ---
 
 This file is a protected system component.  
@@ -249,3 +253,4 @@ It is part of the official Docs-as-System methodology
 and must not be modified by end users.
 
 © 2025 Tomer Kedem
+
