@@ -37,8 +37,9 @@ REQUIRED_SECTIONS:
 - Summary
 -->
 
-# Implementation Plan mini  
+# Implementation Plan  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A logical and technical work plan that defines the development stages,  
 the distribution of responsibility between developers,  
@@ -73,6 +74,7 @@ A technical owner responsible for development planning
 
 ## Purpose of this Document  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 To present a full and clear development plan that can  
 • be divided among several developers in parallel  
@@ -88,7 +90,8 @@ what is being built and when.
 
 ## Structure of the Plan  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
-
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 The plan is built from three layers  
 • Stages  
 • Tasks  
@@ -112,6 +115,7 @@ and unit tests written by developers.
 
 ## Dividing Development into Stages  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Each stage is a large and isolated work unit  
 that can be assigned to one or more developers  
@@ -144,6 +148,7 @@ Requires an existing basic project structure
 
 ## Task Structure  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Each stage is broken down into clear and small tasks  
 that developers and the agent can execute  
@@ -163,6 +168,7 @@ A task definition includes
 
 ### Task Name  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A short and clear name  
 that describes the main action.
@@ -176,6 +182,7 @@ that describes the main action.
 
 ### Task Objective  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A short description  
 of what the task is meant to achieve.
@@ -189,6 +196,7 @@ A good objective is
 
 ### Task Inputs  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 What the task depends on.  
 The inputs must be clearly defined  
@@ -204,6 +212,7 @@ Inputs may include
 
 ### Actions  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A clear description of what must be done.
 
@@ -221,6 +230,7 @@ that does not appear here.
 
 ### Required Output  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The final result the task must deliver.
 
@@ -239,6 +249,7 @@ Outputs may include
 
 ## Task Distribution Between Developers  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The plan is structured so that tasks can be assigned  
 to different developers in parallel  
@@ -261,6 +272,7 @@ and the architecture.
 
 ## Task Dependencies  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The plan must clearly define dependencies between tasks  
 to prevent unnecessary work or logical conflicts.
@@ -283,6 +295,7 @@ Therefore, documentation must be precise and unambiguous.
 
 ## Task Completion Conditions  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 No task may be considered complete  
 before all completion conditions are met.
@@ -302,6 +315,7 @@ A human must always confirm completion.
 
 ## Stage List Structure  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The plan presents a clear and well defined work sequence  
 that can be divided among multiple developers  
@@ -326,6 +340,7 @@ A clear stage definition enables
 
 ## Stage Template Example  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Stage name  
 Building an initial processing component
@@ -362,6 +377,7 @@ with all unit tests passing successfully
 
 ## Agent Workflow Inside Each Stage  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The agent follows a clear and predictable workflow  
 that does not change between stages.
@@ -383,6 +399,7 @@ and does not work without a guiding document.
 
 ## Writing Unit Tests for Each Task  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Every task must include predefined unit tests.  
 This applies to both server side and client side,  
@@ -410,6 +427,7 @@ Client side unit tests
 
 ## Testing Requirements  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The plan states clearly and without exceptions  
 • No task without unit tests  
@@ -426,6 +444,7 @@ for testing depth and quality.
 
 ## Working in Parallel  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 To work with multiple developers in parallel,  
 each stage is broken into tasks  
@@ -450,6 +469,7 @@ without creating chaos.
 
 ## Full Example of Development Stages  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This example demonstrates  
 what a real stage may look like.  
@@ -522,6 +542,7 @@ Stage output
 
 ## Stage Approval Process Before Merge  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Before requesting to merge code into the main branch,  
 a complete approval workflow must be followed.
@@ -542,6 +563,7 @@ A human approves based on alignment with the documents.
 
 ## Preparation for Pull Request  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 When a stage is completed,  
 a structured preparation process  
@@ -563,6 +585,7 @@ not its beginning.
 
 ## Connection to the Log  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Every stage leaves behind  
 a clear and unambiguous log entry.
@@ -583,6 +606,7 @@ in the next cycle.
 
 ## Stage Completion Rules  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A stage is considered complete only when  
 • No tasks are left open  
@@ -601,6 +625,7 @@ without documentation.
 
 ## Summary  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Implementation Plan mini  
 is a real working document.  

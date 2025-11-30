@@ -14,8 +14,9 @@ Original template location
 
 ---
 
-# Business Requirements mini  
+# Business Requirements  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A professional business document that defines the purpose of the project,  
 its business context, the expectations from the system,  
@@ -42,6 +43,7 @@ A business stakeholder or product manager
 
 ## Purpose of this Document  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 To provide a clear business framework  
 from which all logical and technical specifications are derived.  
@@ -60,6 +62,7 @@ It defines:
 
 ## Business Summary  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A short paragraph that explains in simple words  
 why the solution is needed.
@@ -73,6 +76,7 @@ and inconsistency between systems.
 
 ## The Business Problem  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The pain the system is meant to solve.
 
@@ -88,6 +92,7 @@ and free from vague or generic language.
 
 ## Business Opportunity  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Beyond solving the problem,  
 the system creates real value:
@@ -105,6 +110,7 @@ why it makes sense to invest in the system.
 
 ## Business Objectives  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Clear goals the system must achieve.
 
@@ -121,6 +127,7 @@ to the problem and the opportunity.
 
 ## Success Metrics  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Quantitative indicators that allow the team  
 to determine whether the system is truly successful.
@@ -135,6 +142,7 @@ to determine whether the system is truly successful.
 
 ## Project Scope  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A definition of what the system includes  
 and what it intentionally does not include.
@@ -158,6 +166,7 @@ from expanding uncontrollably.
 
 ## Target Audience  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Who is directly affected by the system  
 and why it matters to them.
@@ -181,6 +190,7 @@ Stakeholders
 
 ## Main Data Flows  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 At the business stage we do not discuss technology,  
 but we do define the two most important things:
@@ -204,6 +214,7 @@ and updates a screen or an internal process.
 
 ## Critical Events  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Events that must be handled  
 in a predictable and well defined way.
@@ -221,6 +232,7 @@ into the logical specification (PROJECT_SPEC).
 
 ## Formal Business Requirements  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A list of requirements that define  
 what the system must be able to do.
@@ -240,6 +252,7 @@ in clear business language, not technical terminology.
 
 ## Business Constraints  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Limitations the system must respect.
 
@@ -253,6 +266,7 @@ Limitations the system must respect.
 
 ## Fundamental Assumptions  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Assumptions used by the logical  
 and technical documents.
@@ -270,6 +284,7 @@ the document must be updated.
 
 ## Business Risks  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A focused list of risks that may impact  
 the system’s quality or the user experience.
@@ -284,6 +299,7 @@ the system’s quality or the user experience.
 
 ## Impact of Failure  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A clear explanation of the business impact  
 of different types of failures.
@@ -301,6 +317,7 @@ helps shape the logical specification.
 
 ## Guiding Principles for the Solution  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 High level principles that guide the team  
 before any logical or technical design.
@@ -317,6 +334,7 @@ before any logical or technical design.
 
 ## Rejected Business Alternatives  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Optional but very useful in real projects.
 
@@ -331,6 +349,7 @@ Optional but very useful in real projects.
 
 ## Consolidated Summary  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A short summary of the document.
 
@@ -352,6 +371,7 @@ requires updating this document.
 
 ## Final Principle  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Business Requirements mini provides  
 a complete and serious business framework,  

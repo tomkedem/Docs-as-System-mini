@@ -14,8 +14,9 @@ Original template location
 
 ---
 
-# Project Specification mini  
+# Project Specification  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A complete logical specification that describes what the system does,  
 who interacts with it, which processes take place inside it,  
@@ -39,6 +40,7 @@ A professional owner responsible for validating the logical behavior of the syst
 
 ## Purpose of this Document  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 To define the logical behavior of the system in a clear and accurate way.  
 This is a bridge document that translates business logic  
@@ -52,6 +54,7 @@ rather than how it does it.
 
 ## System Actors  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A list of entities that interact with the system on a logical level.
 
@@ -68,6 +71,7 @@ to clarify its role and influence on the processes.
 
 ## Actor Goals  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The motivation that drives each actor to perform actions in the system.
 
@@ -81,6 +85,7 @@ General examples only
 
 ## Main Use Cases  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Use cases describe what each actor does inside the system.  
 There is no technology here and no code structure.  
@@ -101,6 +106,7 @@ and the technical architecture.
 
 ### First Use Case  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Use case name  
 A short description of what happens  
@@ -130,6 +136,7 @@ and receive a clear result
 
 ### Additional Use Case  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Use case name  
 Describe what is blocking the user  
@@ -158,6 +165,7 @@ Provide a consistent and clear outcome
 
 ### Creating Additional Use Cases  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Every project includes a different number of use cases.  
 Sometimes three, sometimes twenty.  
@@ -174,6 +182,7 @@ Each use case must be:
 
 ## Overall Logical Flow  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A description of the general sequence of operations  
 that occur in the system,  
@@ -203,6 +212,7 @@ The flow describes:
 
 ## Logical Events in the System  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This document must define the main events in the system,  
 because events are the foundation of stability.
@@ -223,6 +233,7 @@ Each event includes:
 
 ## Logical Data Structure  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This document does not define a database schema.  
 Instead, it describes the main entities  
@@ -248,6 +259,7 @@ It defines only the logical meaning.
 
 ## Logical Rules  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Rules that describe how the system behaves in different situations.  
 They guide the technical planning that comes later.
@@ -272,6 +284,7 @@ of the system’s logical behavior.
 
 ## Edge Conditions  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Every system includes situations that are not part of the normal flow.  
 They must be defined clearly to avoid surprises.
@@ -292,6 +305,7 @@ For each edge condition define:
 
 ## Interactions Between Components  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This document describes the logical interaction  
 between components in the system,  
@@ -320,6 +334,7 @@ If an exception occurs:
 
 ## Logical Consistency  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The purpose of this section is to ensure that every process,  
 every use case, and every rule in the system  
@@ -339,6 +354,7 @@ and to avoid unexpected behavior during development.
 
 ## Success Outcomes  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This document must define  
 what counts as a correct logical outcome in each process.  
@@ -359,6 +375,7 @@ for test planning and technical architecture.
 
 ## Failure Outcomes  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Logical failure is defined in advance  
 so that the system and the agent  
@@ -382,6 +399,7 @@ In case of failure:
 
 ## Timing Considerations  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Some processes require attention to timing.  
 This document describes such timing at a logical level.
@@ -401,6 +419,7 @@ Therefore the system limits logical processing speed.
 
 ## Logical Integrations with Other Systems  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This section is a high level description  
 that does not include protocols or technical formats.
@@ -419,6 +438,7 @@ to guide the future architecture.
 
 ## System Behavior Principles  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This document defines general principles  
 that the system must not violate.
@@ -436,6 +456,7 @@ These principles are mandatory for any technical design.
 
 ## Logical Flow Diagram  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This document may include a simple textual or graphical diagram.  
 It is not mandatory, but it is highly recommended.
@@ -454,6 +475,7 @@ the overall picture of the processes.
 
 ## Preconditions and Postconditions  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Every process must be fully defined.
 
@@ -472,6 +494,7 @@ Every process must be fully defined.
 
 ## Decision Based Rules  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This document also includes rules  
 that define how the system chooses a course of action.
@@ -492,6 +515,7 @@ for future architectural planning.
 
 ## Summary  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The Project Specification mini  
 defines the full logical behavior of the system.  

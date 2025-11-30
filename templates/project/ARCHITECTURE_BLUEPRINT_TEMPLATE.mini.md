@@ -34,8 +34,9 @@ REQUIRED_SECTIONS:
 - Summary
 -->
 
-# Architecture Blueprint mini  
+# Architecture Blueprint  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A technical architecture document that defines the structure of the system,  
 its main components, the core flows, and the boundaries of responsibility.  
@@ -64,6 +65,7 @@ System architect or senior technical owner
 
 ## Purpose of this Document  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 To clearly describe the technical structure of the system.  
 This document answers two primary questions:
@@ -78,6 +80,7 @@ It defines the structural blueprint that all code must follow.
 
 ## System Overview  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 A high-level overview of the system’s parts.  
 No technology lists, no languages, no databases.  
@@ -99,6 +102,7 @@ and does not perform tasks outside its domain.
 
 ## Responsibility Allocation Between Components  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Every component receives a well-defined responsibility domain  
 to prevent overlap and confusion.
@@ -118,8 +122,8 @@ The goal is to guarantee clarity and separation of concerns.
 ---
 
 ## Core Data Flow  
-<!-- DO NOT REMOVE OR OR RENAME THIS HEADING -->
-
+<!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 The blueprint must present the system’s primary data flow  
 in a simple, technology-agnostic way.
 
@@ -141,6 +145,7 @@ In case of failure:
 
 ## System Components  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This section describes the major components of the system.  
 The explanation is conceptual, not technological.  
@@ -164,6 +169,7 @@ This separation prevents overlap and keeps the system predictable.
 
 ## Component Responsibilities  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Each component is described so that both the developer  
 and the agent understand what is allowed and what is forbidden.
@@ -202,6 +208,7 @@ General examples
 
 ## Responsibility Boundaries  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Defining boundaries is a critical part of the blueprint.  
 It prevents shortcuts, mixing responsibilities,  
@@ -221,6 +228,7 @@ is part of the development workflow and must not invent structure.
 
 ## Component Dependencies  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This section describes how each component depends on others.  
 This is not about technologies, protocols, or frameworks —  
@@ -242,6 +250,7 @@ When a dependency fails:
 
 ## Architectural Rules That Must Not Be Violated  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 These rules define the core stability, consistency,  
 and technical identity of the system.
@@ -261,6 +270,7 @@ the agent must always respect.
 
 ## System Level Data Structure  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This section describes how the system conceptually stores,  
 processes, and exposes information.  
@@ -286,6 +296,7 @@ The agent uses this layer to maintain consistency.
 
 ## Timing Management  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This part describes how the system handles timing,  
 a critical aspect in most real-world systems.
@@ -307,6 +318,7 @@ General examples
 
 ## System Events  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Events are a central part of any stable system.  
 They define predictable behavior and enable structured flows.
@@ -335,6 +347,7 @@ If an exception appears:
 
 ## Integrations with External Systems  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Every real system interacts with external sources at some point.  
 This section defines those interactions at a *logical* level only.
@@ -356,6 +369,7 @@ Any deviation must be logged clearly.
 
 ## System Consistency  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 One of the most important architectural principles.  
 The system must remain logically consistent at all times.
@@ -373,6 +387,7 @@ to perform accurate self-checks before writing code.
 
 ## Core Architectural Principles  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 These principles define the character of the system  
 and the way it should behave from a technical perspective.  
@@ -392,6 +407,7 @@ even years after its initial development.
 
 ## Non-Negotiable Rules  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This section is crucial because it defines the reset lines of the architecture.  
 Both developers and the agent must follow these rules.
@@ -411,6 +427,7 @@ even when the team changes.
 
 ## Reliability and Continuous Operation  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 This section defines how the system behaves  
 under load, partial failures, or unexpected conditions.  
@@ -430,6 +447,7 @@ perform correct validations before making any code changes.
 
 ## Exception Handling  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 Every system must manage exceptions  
 in a structured and predictable way  
@@ -448,6 +466,7 @@ Strong exception handling directly impacts system quality.
 
 ## Updating the System Structure  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The system is not static.  
 This section explains how structural changes must be performed safely.
@@ -467,6 +486,7 @@ that might break existing processes.
 
 ## Development Cycles  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The blueprint describes how the system progresses  
 across different development stages.
@@ -485,6 +505,7 @@ to move between stages with no ambiguity.
 
 ## Summary  
 <!-- DO NOT REMOVE OR RENAME THIS HEADING -->
+<!-- TEMPLATE_CONTENT: Replace this entire section with your project specific content, then delete this TEMPLATE_CONTENT line. -->
 
 The Architecture Blueprint mini defines the system’s structure  
 and its technical behavior at a language-agnostic level.  
