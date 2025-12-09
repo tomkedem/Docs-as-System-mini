@@ -4,7 +4,7 @@
 This file is part of the official Docs-as-System methodology.  
 End users must not modify this file directly.  
 To use it for a real project, copy this file into:  
-`docs/project/PROJECT_SPEC.mini.md`  
+`docs/project/PROJECT_SPECIFICATION.mini.md`  
 and edit the copy only.
 
 ---
@@ -42,7 +42,7 @@ who interacts with it, which processes take place inside it,
 and the expected behavior in every situation.
 
 Actual file location  
-docs/project/PROJECT_SPEC.mini.md
+docs/project/PROJECT_SPECIFICATION.mini.md
 
 Creator  
 An agent under human supervision
@@ -563,6 +563,6 @@ without room for interpretation.
 This is a protected template file  
 and must not be edited directly inside a project.  
 To customize it, create or update:  
-`docs/project/PROJECT_SPEC.mini.md`
+`docs/project/PROJECT_SPECIFICATION.mini.md`
 
 © 2025 Tomer Kedem

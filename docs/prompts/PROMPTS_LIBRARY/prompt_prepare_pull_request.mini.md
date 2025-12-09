@@ -22,7 +22,7 @@ docs/automation/OPEN_PULL_REQUEST.sh.
 ## Relevant Files  
 • docs/logs/IMPLEMENTATION_LOG.mini.md  
 • docs/project/IMPLEMENTATION_PLAN.mini.md  
-• docs/project/PROJECT_SPEC.mini.md  
+• docs/project/PROJECT_SPECIFICATION.mini.md  
 • docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
 • docs/agent/AGENT_CONFIG.mini.yaml  
 • docs/automation/OPEN_PULL_REQUEST.sh  

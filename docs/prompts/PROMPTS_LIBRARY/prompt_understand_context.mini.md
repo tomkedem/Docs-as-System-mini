@@ -28,7 +28,7 @@ Create a complete understanding of the context before performing any action insi
 ## Documents to Read  
 
 • docs/project/BUSINESS_REQUIREMENTS.mini.md  
-• docs/project/PROJECT_SPEC.mini.md  
+• docs/project/PROJECT_SPECIFICATION.mini.md  
 • docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
 • docs/project/IMPLEMENTATION_PLAN.mini.md  
 • docs/logs/IMPLEMENTATION_LOG.mini.md  

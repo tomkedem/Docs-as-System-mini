@@ -16,7 +16,7 @@ Verify that all work performed meets the methodology requirements before continu
 
 ## Instructions  
 
-• Verify that the change aligns with docs/project/PROJECT_SPEC.mini.md  
+• Verify that the change aligns with docs/project/PROJECT_SPECIFICATION.mini.md  
 • Verify that there is no deviation from docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
 • Verify that the change matches the relevant step defined in docs/project/IMPLEMENTATION_PLAN.mini.md  
 • Verify that the change does not contradict docs/project/BUSINESS_REQUIREMENTS.mini.md  

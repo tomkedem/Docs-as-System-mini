@@ -33,7 +33,7 @@ In this project, the core documents and their templates are:
 ### Project documents (editable by the human)
 
 - `docs/project/BUSINESS_REQUIREMENTS.mini.md`  
-- `docs/project/PROJECT_SPEC.mini.md`  
+- `docs/project/PROJECT_SPECIFICATION.mini.md`  
 - `docs/project/ARCHITECTURE_BLUEPRINT.mini.md`  
 - `docs/project/IMPLEMENTATION_PLAN.mini.md`  
 
@@ -44,7 +44,7 @@ and the files must remain in Markdown `.md` format.
 ### Template documents (read only reference)
 
 - `templates/project/BUSINESS_REQUIREMENTS_TEMPLATE.mini.md`  
-- `templates/project/PROJECT_SPEC_TEMPLATE.mini.md`  
+- `templates/project/PROJECT_SPECIFICATION_TEMPLATE.mini.md`  
 - `templates/project/ARCHITECTURE_BLUEPRINT_TEMPLATE.mini.md`  
 - `templates/project/IMPLEMENTATION_PLAN_TEMPLATE.mini.md`  
 
@@ -159,7 +159,7 @@ Issues:
 - [Type] <short description>
 
 [FILE:SPEC]
-Path: docs/project/PROJECT_SPEC.mini.md
+Path: docs/project/PROJECT_SPECIFICATION.mini.md
 Status: OK | WARNING | BLOCKER
 Issues:
 - [Type] <short description>

@@ -30,7 +30,7 @@ without skipping any stage.
 
 ### Project Documents  
 • docs/project/BUSINESS_REQUIREMENTS.mini.md  
-• docs/project/PROJECT_SPEC.mini.md  
+• docs/project/PROJECT_SPECIFICATION.mini.md  
 • docs/project/IMPLEMENTATION_PLAN.mini.md  
 • docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
 

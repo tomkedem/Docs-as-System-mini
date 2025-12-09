@@ -10,7 +10,7 @@ Only the section headings must remain in English for validation.
 This document must remain in Markdown (.md) format.
 
 Original template location  
-`templates/project/PROJECT_SPEC_TEMPLATE.mini.md`
+`templates/project/PROJECT_SPECIFICATION_TEMPLATE.mini.md`
 
 ---
 
@@ -23,7 +23,7 @@ who interacts with it, which processes take place inside it,
 and the expected behavior in every situation.
 
 Actual file location  
-docs/project/PROJECT_SPEC.mini.md
+docs/project/PROJECT_SPECIFICATION.mini.md
 
 Creator  
 A human with writing assistance from the agent

@@ -26,7 +26,7 @@ and only under explicit human instruction.
 
 docs/agent/HUMAN_OPERATIONAL_POLICY.mini.md  
 docs/agent/AGENT_OPERATIONAL_POLICY.mini.md  
-docs/project/PROJECT_SPEC.mini.md  
+docs/project/PROJECT_SPECIFICATION.mini.md  
 docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
 docs/logs/IMPLEMENTATION_LOG.mini.md  
 
@@ -39,7 +39,7 @@ Identify every difference between them
 and their original versions  
 
 Cross check these differences against the core project documents:  
-• docs/project/PROJECT_SPEC.mini.md  
+• docs/project/PROJECT_SPECIFICATION.mini.md  
 • docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
 • docs/project/IMPLEMENTATION_PLAN.mini.md  
 • docs/logs/IMPLEMENTATION_LOG.mini.md (latest entry only)  

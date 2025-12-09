@@ -46,7 +46,7 @@ paths:
   readOnlyFiles:
     - "docs/project/ARCHITECTURE_BLUEPRINT.mini.md"
     - "docs/project/BUSINESS_REQUIREMENTS.mini.md"
-    - "docs/project/PROJECT_SPEC.mini.md"
+    - "docs/project/PROJECT_SPECIFICATION.mini.md"
 
 # ============================================================================
 # DOCUMENT PATHS — MUST MATCH THE FINAL STRUCTURE
@@ -54,7 +54,7 @@ paths:
 
 documents:
   businessRequirementsPath: "docs/project/BUSINESS_REQUIREMENTS.mini.md"
-  projectSpecPath: "docs/project/PROJECT_SPEC.mini.md"
+  projectSpecPath: "docs/project/PROJECT_SPECIFICATION.mini.md"
   architectureBlueprintPath: "docs/project/ARCHITECTURE_BLUEPRINT.mini.md"
   implementationPlanPath: "docs/project/IMPLEMENTATION_PLAN.mini.md"
 
@@ -207,7 +207,7 @@ commands:
 
 selfCheck:
   checklist:
-    - "All changes align with docs/project/PROJECT_SPEC.mini.md"
+    - "All changes align with docs/project/PROJECT_SPECIFICATION.mini.md"
     - "No violation of docs/project/ARCHITECTURE_BLUEPRINT.mini.md"
     - "Change matches the active task in docs/project/IMPLEMENTATION_PLAN.mini.md"
     - "Unit tests added or updated for each new or changed logic path"

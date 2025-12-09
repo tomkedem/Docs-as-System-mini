@@ -18,7 +18,7 @@ and verify that the step is ready for execution before any work begins.
 
 ## Relevant Files  
 • docs/project/IMPLEMENTATION_PLAN.mini.md  
-• docs/project/PROJECT_SPEC.mini.md  
+• docs/project/PROJECT_SPECIFICATION.mini.md  
 • docs/project/ARCHITECTURE_BLUEPRINT.mini.md  
 
 ## Instructions  
